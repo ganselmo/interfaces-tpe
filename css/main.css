@@ -1,0 +1,303 @@
+@font-face {
+    font-family: "Montserrat Light";
+    src: url("../assets/fonts/Montserrat/Montserrat-Light.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../assets/fonts/Montserrat/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat med";
+    src: url("../assets/fonts/Montserrat/Montserrat-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat semi bold";
+    src: url("../assets/fonts/Montserrat/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat bold";
+    src: url("../assets/fonts/Montserrat/Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat black";
+    src: url("../assets/fonts/Montserrat/Montserrat-Black.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    --base-color: #1a1c20;
+    --primary-color: #f4f4f4;
+    --secondary-color: #f0a500;
+    --tertiary-color: #cf7500;
+    --disabled-color: #9b9b9b;
+    --small-font: 6px;
+    --normal-font: 10px;
+    --big-font: 14px;
+    --h4-font: 18px;
+    --h3-font: 24px;
+    --h2-font: 36px;
+    --h1-font: 48px;
+}
+
+* {
+    font-family: "Montserrat";
+}
+
+button:disabled, button[disabled] {
+    background-color: var(--disabled-color);
+    color: var(--primary-color);
+}
+
+input:disabled, input[disabled] {
+    background-color: var(--disabled-color);
+    color: var(--primary-color);
+}
+
+input:disabled::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--primary-color);
+    opacity: 0.5;
+    /* Firefox */
+}
+
+input:disabled:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: var(--primary-color);
+}
+
+input:disabled::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: var(--primary-color);
+}
+
+button, input[type="submit"], input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+input {
+    -webkit-appearance: none;
+    outline: none;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    appearance: textfield;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    border: 0px;
+    text-align: left;
+    border-image: initial;
+    transition: border-bottom 0.5s;
+    height: 28px;
+    border-radius: 10px;
+}
+
+.btn {
+    border-radius: 20px;
+    font-family: "Montserrat med";
+}
+
+.btn.md {
+    font-style: normal;
+    line-height: 17px;
+    font-size: 14px;
+    width: 180px;
+    height: 28px;
+}
+
+.btn.block {
+    margin: 10px 5%;
+    width: 90%;
+    height: 45px;
+}
+
+.btn.fat {
+    width: 90px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 10px;
+}
+
+.btn.square {
+    width: 30px;
+    height: 30px;
+    border-radius: 0;
+    font-size: 10px;
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.primary {
+    background-color: var(--primary-color);
+    color: var( --base-color);
+}
+
+.tertiary {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+}
+
+.base {
+    background-color: var( --base-color);
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: var(--h1-font);
+}
+
+h2 {
+    font-size: var(--h2-font);
+}
+
+h3 {
+    font-size: var(--h3-font);
+}
+
+h4 {
+    font-size: var(--h4-font);
+}
+
+.small {
+    font-size: var(--small-font);
+}
+
+.normal {
+    font-size: var(--normal-font);
+}
+
+.big {
+    font-weight: 500;
+    font-size: var(--big-font);
+}
+
+.input {
+    text-align: center;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.input.block {
+    margin: 10px 5%;
+    width: 90%;
+    height: 40px;
+}
+
+.input.md {
+    font-style: normal;
+    line-height: 17px;
+    font-size: 14px;
+    width: 180px;
+    height: 28px;
+}
+
+.image {
+    background-color: var(--disabled-color);
+    border-radius: 10px;
+}
+
+.image.big {
+    height: 170px;
+    width: 170px;
+}
+
+.image.big.squared {
+    height: 160px;
+    width: 160px;
+    border-radius: 0;
+}
+
+.image.wide {
+    height: 100px;
+    width: 150px;
+}
+
+.image.req {
+    height: 100px;
+    width: 120px;
+}
+
+.image.normal.squared {
+    height: 45px;
+    width: 45px;
+    border-radius: 0;
+}
+
+.image.normal.profile {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+}
+
+.image img {
+    height: inherit;
+    width: inherit;
+    overflow: hidden;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.lbl {
+    border-radius: 90px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lbl.md {
+    font: var(--normal-font);
+    width: 120px;
+    height: 40px;
+}
+
+.lbl.sm {
+    font: var(--normal-font);
+    width: 150px;
+    height: 30px;
+}
+
+.lbl.xsm {
+    width: 120px;
+    height: 30px;
+    font: var(--small-font);
+}
+
+.lbl.bg {
+    font: var(--big-font);
+    width: 150px;
+    height: 40px;
+}
+
+.lbl.block {
+    margin: 10px 5%;
+    width: 90%;
+    height: 50px;
+    font-size: var(--h3-font);
+   
+}

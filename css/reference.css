@@ -1,0 +1,29 @@
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+main div{
+    width: 100%;
+    margin: 20px;
+}
+
+main div button{
+    margin: 10px
+}
+.buttonsblock{
+
+    margin: 0;
+
+}
+
+.letras{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.letras span{
+    margin: 10px;
+}
