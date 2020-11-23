@@ -1,3 +1,4 @@
+
 export class Component extends HTMLElement {
     constructor(url) {
         super();
@@ -34,8 +35,10 @@ export class Component extends HTMLElement {
                 }
             }
         )
-        fetch(cssUrl).then(
+    
+        fetch('/css/main.css').then(
             response => {
+      
                 if (response.ok) {
                     response.text().then(
                         data => {
@@ -46,6 +49,25 @@ export class Component extends HTMLElement {
                     );
 
                 }
+
+            }
+        )
+
+        fetch(cssUrl).then(
+            response => {
+      
+                if (response.ok) {
+                    response.text().then(
+                        data => {
+                            var sheet = new CSSStyleSheet
+                            sheet.replaceSync(data)
+
+                            this.shadowRoot.adoptedStyleSheets = [sheet]
+                        }
+                    );
+
+                }
+
             }
         )
 
