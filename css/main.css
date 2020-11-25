@@ -163,7 +163,6 @@ input {
     color: var(--primary-color);
 }
 
-
 h1 {
     font-size: var(--h1-font);
 }
@@ -300,5 +299,9 @@ h4 {
     width: 90%;
     height: 50px;
     font-size: var(--h3-font);
-   
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
