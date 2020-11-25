@@ -6,23 +6,16 @@ export class TestChild extends Component {
 
     constructor() {
         super(import.meta.url)
-
     }
 
     init() {
-
-        this.addEventListener('change', (event) => {
+        this.addEventListener('change', (e) => {
             console.log(e)
         })
-
-
         this.addEventListener('click',
             function () {
                 this.makeblue(1)
-
             });
-
-
 
     }
     changes() {

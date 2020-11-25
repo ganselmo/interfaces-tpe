@@ -8,7 +8,7 @@ export class HeaderComponent extends Component {
 
     init() {
 
-
+            
     }
     changes()
     {

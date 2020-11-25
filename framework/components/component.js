@@ -6,7 +6,8 @@ export class Component extends HTMLElement {
         let cssUrl = url.replace('js', 'css')
         let htmlUrl = url.replace('js', 'html')
         this.attachShadow({ mode: 'open' });
-
+        this.shadowRoot.adoptedStyleSheets =[]
+        this.shadowRoot.attributes = this.attributes
         const element = this
         fetch(htmlUrl).then(
             response => {
@@ -35,17 +36,36 @@ export class Component extends HTMLElement {
                 }
             }
         )
-    
+        let mainSheet;
+        let componentSheet;
         fetch('/css/main.css').then(
             response => {
       
                 if (response.ok) {
                     response.text().then(
                         data => {
-                            var sheet = new CSSStyleSheet
-                            sheet.replaceSync(data)
-                            this.shadowRoot.adoptedStyleSheets = [sheet]
+                            mainSheet = new CSSStyleSheet
+                            mainSheet.replaceSync(data)
+                        
                         }
+                    ).then(
+                        fetch(cssUrl).then(
+                            response => {
+                      
+                                if (response.ok) {
+                                    response.text().then(
+                                        data => {
+                                            componentSheet = new CSSStyleSheet
+                                            componentSheet.replaceSync(data)
+                
+                                            this.shadowRoot.adoptedStyleSheets = [mainSheet,componentSheet]
+                                        }
+                                    );
+                
+                                }
+                
+                            }
+                        )
                     );
 
                 }
@@ -53,23 +73,9 @@ export class Component extends HTMLElement {
             }
         )
 
-        fetch(cssUrl).then(
-            response => {
-      
-                if (response.ok) {
-                    response.text().then(
-                        data => {
-                            var sheet = new CSSStyleSheet
-                            sheet.replaceSync(data)
+       
 
-                            this.shadowRoot.adoptedStyleSheets = [sheet]
-                        }
-                    );
-
-                }
-
-            }
-        )
+ 
 
 
 
