@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleEq.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class = "equalizer">
+        <input type="range" orient="vertical" min="0" max="100" value="50" class = "rangeEq">
+        <input type="range" orient="vertical" min="0" max="100" value="50" class = "rangeEq">
+        <input type="range" orient="vertical" min="0" max="100" value="50" class = "rangeEq">
+        <input type="range" orient="vertical" min="0" max="100" value="50" class = "rangeEq">  
+        <input type="range" orient="vertical" min="0" max="100" value="50" class = "rangeEq">  
+    </div>
+
+    <div class="player_console">
+        <div class="info_play">
+          <div class="logo_placa"></div>
+          <div class="text_info">
+            <p>Tema que estas escuchando</p>
+            <p>nombre del artista</p>
+          </div>
+        </div>
+        <div class="player_buttons">
+              <div class="btn_next">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.5 19.1143L4.3963 10L19.5 0.885708L19.5 19.1143Z" fill="#F4F4F4" stroke="#F4F4F4"/>
+                  <rect x="0.5" y="0.5" width="2.42857" height="19" fill="#F4F4F4" stroke="#F4F4F4"/>
+                  </svg>
+                  
+              </div>
+              <div class="boton_play">
+                <div class="playpause">
+                  <input type="checkbox" value="None" id="playpause" name="check" />
+                  <label for="playpause" tabindex=1></label>
+                </div>
+              </div>
+              <div class="btn_next">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.500011 0.885709L15.6037 10L0.500011 19.1143V0.885709Z" fill="#F4F4F4" stroke="#F4F4F4"/>
+                  <rect x="19.5" y="19.5" width="2.42857" height="19" transform="rotate(-180 19.5 19.5)" fill="#F4F4F4" stroke="#F4F4F4"/>
+                  </svg>
+                    
+              </div>
+        </div>
+        <div class="comandos">
+
+        </div>
+    </div>
+    <script src="js/player.js"></script>
+</body>
+</html>

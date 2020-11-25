@@ -1,0 +1,154 @@
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+.equalizer{
+    display: flex;
+    flex-direction: row;
+    height: 170px;
+    width: 375px;
+    background-color:#1A1C20;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.ranngeEq{
+    /* -webkit-appearance: none; */
+    height: 60px;
+    width: 20px;
+    border-radius: 5px;
+    background: gray;
+    outline: none;
+    writing-mode: bt-lr; /* IE */
+    transition: .2s;
+    appearance: slider-vertical; /* WebKit */
+}
+
+
+
+.rangeEq {
+    -webkit-appearance: none;
+    width: 70px;
+    height: 5px;
+    border-radius: 5px;
+    background: #F4F4F4;
+    transform: translate(-50%,-50%) rotate(-90deg);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+   
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .rangeEq::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: orange;
+    cursor: pointer;
+  }
+  
+  /*******************PayerConsole*******************/
+.player_console{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: 60px;
+  width: 375px;
+  background-color: #1A1C20;
+}
+
+.player_buttons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: inherit;
+  width: 30%;
+  background-color: #1A1C20;
+}
+.info_play {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: inherit;
+  width: 150px;
+  background-color: #1A1C20;
+  color: #F4F4F4;
+}
+.text_info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: inherit;
+  width: 100px;
+}
+
+.logo_placa{
+  height: 50px;
+  width: 50px;
+  background-color: lightblue;
+}
+
+  /*****************BOTTONS*******************/
+  .boton_play{
+    right:50px;
+    position: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width:50px;
+    height:50px;
+    background-color:orange;
+    margin: 5px;
+    padding:10px;
+    border-radius: 50%;
+  }
+
+  /*****playpause******/
+
+  .playpause label {
+      display: block;
+      /* box-sizing: border-box; */
+      width: 0;
+     /*  height: 74px; */
+      height: 35px;
+      border-color: transparent transparent transparent white;
+      transition: 100ms all ease;
+      cursor: pointer;
+      border-style: double;
+      /* border-width: 0px 0 0px 60px; */
+      border-width: 0px 0 0px 30px;
+    }
+    .playpause input[type="checkbox"] {
+      position: absolute;
+      left: -9999px;
+    }
+    .playpause input:checked + label {
+        border-style: solid;
+        /* border-width: 37px 0 37px 60px; */
+        border-width: 17px 0 17px 30px;
+      }
+    
+
+/****************NEXT PREVIUS********************/
+
+
+.btn_next {
+  display: inline-block;
+  align-items: initial;
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+}
+
+
