@@ -18,7 +18,6 @@ export class Component extends HTMLElement {
                             element.init()
                             let observer = new MutationObserver(function (mutations) {
                                 mutations.forEach(function (mutation) {
-                                    console.log(mutation)
                                     if (mutation.type == "attributes") {
                                         element.changes() 
 
@@ -38,7 +37,7 @@ export class Component extends HTMLElement {
         )
         let mainSheet;
         let componentSheet;
-        fetch('/css/main.css').then(
+        fetch('./css/main.css').then(
             response => {
       
                 if (response.ok) {
@@ -57,7 +56,7 @@ export class Component extends HTMLElement {
                                         data => {
                                             componentSheet = new CSSStyleSheet
                                             componentSheet.replaceSync(data)
-                
+                              
                                             this.shadowRoot.adoptedStyleSheets = [mainSheet,componentSheet]
                                         }
                                     );
