@@ -1,4 +1,4 @@
-import { Component } from "../../../framework/components/component.js";
+import { Component } from "../../framework/components/component.js";
 import { closeProfileContext } from "../../js/context-menu.handler.js";
 
 export class HeaderComponent extends Component {
