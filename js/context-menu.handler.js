@@ -1,6 +1,6 @@
 
 let contextMenu = document.querySelector('#profile-menu');
-document.addEventListener("DOMContentLoaded", async function () {
+document.addEventListener("DOMContentLoaded", function () {
     
     contextMenu.addEventListener('openContext',openProfileContext)
 

@@ -10,9 +10,6 @@ export class HeaderComponent extends Component {
     closeEvent = new CustomEvent("closeContext");
     openEvent = new CustomEvent("openContext");
     init() {
-
-                
-   
         let profile =  this.shadowRoot.querySelector('#profile')
         console.log(profile)
         let elementer = this
