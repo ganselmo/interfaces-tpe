@@ -7,13 +7,18 @@ export class OptionsComponent extends Component {
   constructor() {
     super(import.meta.url)
   }
-  parent =  document.querySelector('#equalizer')
+  parent =  document.querySelector('#equalizer');
   closeEvent = new CustomEvent("closeEq");
   openEvent = new CustomEvent("openEq");
+  modeparent= document.querySelector('#mode');
+  closeMode= new CustomEvent("closeMode");
+  openMode= new CustomEvent("openMode");
+ 
+
 
   init() {
-    //#region obtencion de Buttons
     let element = this
+    //#region obtencion de Buttons
     let btnEq = this.shadowRoot.querySelector("#btn_eq");
     let btnEqSel = this.shadowRoot.querySelector("#btn_eqsel");
     let btnMod = this.shadowRoot.querySelector("#btn_mod");
@@ -40,12 +45,13 @@ export class OptionsComponent extends Component {
     btnMod.addEventListener('click',function (){
       this.classList.toggle("oculto");
       btnModSel.classList.toggle("oculto");
-
+      element.modeparent.dispatchEvent(element.openMode);
     });
+
     btnModSel.addEventListener('click',function (){
       this.classList.toggle("oculto");
       btnMod.classList.toggle("oculto");
-
+      element.modeparent.dispatchEvent(element.closeMode);
     });
 
     btnRandom.addEventListener('click',function (){
