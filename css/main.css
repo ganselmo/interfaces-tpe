@@ -305,3 +305,15 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
+.profile-menu{
+    position: absolute;
+    right: 0;
+   
+}
+
+.extends{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}

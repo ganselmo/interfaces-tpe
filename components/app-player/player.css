@@ -1,0 +1,113 @@
+section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background-color: var(--base-color);
+    justify-content: center;
+}
+
+/*******************PayerConsole*******************/
+
+
+  .player_buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: inherit;
+    background-color: var(--base-color);
+  }
+  .info_play {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: inherit;
+    background-color: var(--base-color);
+    color: var(--primary-color);
+  }
+  .text_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 5px;
+    color: var(--primary-color);
+    height: inherit;
+  }
+  
+  .logo_placa{
+    height: 50px;
+    width: 50px;
+    background-color:  var(--primary-color);
+  }
+  
+  .button_oculto{
+      display: none;
+  }
+    /*****************BOTTONS*******************/
+    .boton_play{
+      right:50px;
+      position: inherit;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width:50px;
+      height:50px;
+      background-color:var(--tertiary-color);
+      margin: 10px;
+      border-radius: 50px;
+    }
+    
+
+
+    /*****playpause******/
+  
+    .playpause label {
+        display: block;
+        /* box-sizing: border-box; */
+        width: 0;
+       /*  height: 74px; */
+        height: 35px;
+        border-color: transparent transparent transparent white;
+        transition: 100ms all ease;
+        cursor: pointer;
+        border-style: double;
+        /* border-width: 0px 0 0px 60px; */
+        border-width: 0px 0 0px 30px;
+      }
+      .playpause input[type="checkbox"] {
+        position: absolute;
+        left: -9999px;
+      }
+      .playpause input:checked + label {
+          border-style: solid;
+          /* border-width: 37px 0 37px 60px; */
+          border-width: 17px 0 17px 30px;
+        }
+      
+  
+  /****************NEXT PREVIUS********************/
+  
+  
+  .btn_next {
+    display: inline-block;
+    align-items: initial;
+    height: 22px;
+    width: 22px;
+    cursor: pointer;
+  }
+
+
+.comandos {
+    left: 10px;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    align-items: center;
+}
+
+.options {
+    width: 22px;
+    height: 22px;
+}
+

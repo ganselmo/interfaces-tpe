@@ -1,0 +1,14 @@
+.parent{
+    height: 64px ;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.main{
+    background-color: var(--tertiary-color);
+    height: 64px ;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+
+}

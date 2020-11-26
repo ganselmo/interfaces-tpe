@@ -1,4 +1,4 @@
-import { Component } from "../../../framework/components/component.js";
+import { Component } from "../../framework/components/component.js";
 
 
 export class EquComponent extends Component {
@@ -9,17 +9,9 @@ export class EquComponent extends Component {
     }
 
     init() {
-    let button = this.shadowRoot.querySelector('button');
-    let attributes = this.attributes
-    button.addEventListener('click',function()
-    {
-        console.log(attributes)
-        alert(attributes.value.value)
-    })
-
     }
     changes() {
-      
+
     }
 
 

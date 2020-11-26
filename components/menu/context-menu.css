@@ -1,0 +1,21 @@
+div.main {
+    background-color: var(--base-color);
+    width: 165px;
+    box-shadow: black 0px 5px 5px 2px;
+
+}
+
+div.words {
+    position: relative;
+    left: 10px;
+    padding: 8px;
+    background-color: transparent;
+}
+
+div.line {
+    position: relative;
+    left: 30px;
+    height: 1px;
+    width: 135px;
+
+}
