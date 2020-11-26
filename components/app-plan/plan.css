@@ -1,0 +1,55 @@
+.pricing-content {
+    position: absolute;
+    width: 120px;
+    height: 235px;
+    left: 5px;
+    top: 5px;
+}
+
+.pricing-content .image {
+    /* Img */
+    position: absolute;
+    width: 120px;
+    height: 100px;
+}
+
+.pricing-content .image.req {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing-content .image.req div {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.pricing-content .lbl.md {
+    /* PrimaryLabelCard */
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    top: 115px;
+    /* Secundario */
+    background: var(--secondary-color);
+    border-radius: 90px;
+}
+
+.pricing-content .lbl.xsm {
+    /* SecondaryLabelCard */
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    /* Terciario */
+    background: var(--tertiary-color);
+    border-radius: 90px;
+}
+
+.pricing-content :nth-child(3) {
+    top: 170px;
+}
+
+.pricing-content :nth-child(4) {
+    top: 210px;
+}
