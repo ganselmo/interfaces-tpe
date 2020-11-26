@@ -25,6 +25,12 @@ export class HeaderComponent extends Component {
         base.forEach(element => {
             element.addEventListener('click',closeProfileContext)
         });
+
+        let lupa = this.shadowRoot.querySelector(".lupa.notlinked")
+        lupa.addEventListener('click',function()
+        {
+            elementer.openLupa()
+        })
         
     }
     changes()
@@ -47,7 +53,10 @@ export class HeaderComponent extends Component {
     {
         return this.parent.style.visibility
     }
-
+    openLupa()
+    {
+        console.log(this)
+    }
     
 
 }

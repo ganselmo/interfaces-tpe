@@ -1,5 +1,4 @@
 import { Component } from "../../../framework/components/component.js";
-import { ArrayParser } from "../../helpers/parsers.js";
 
 export class MenuComponent extends Component {
 

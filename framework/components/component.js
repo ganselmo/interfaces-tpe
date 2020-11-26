@@ -56,7 +56,7 @@ export class Component extends HTMLElement {
                                         data => {
                                             componentSheet = new CSSStyleSheet
                                             componentSheet.replaceSync(data)
-                
+                              
                                             this.shadowRoot.adoptedStyleSheets = [mainSheet,componentSheet]
                                         }
                                     );

@@ -1,0 +1,17 @@
+.buscador{
+    height: 64px;
+    background-color: var(--base-color);
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.buscador input.input.block{
+    height: 31px;
+    border-radius: 50px;
+}
+
+.lupa{
+    position: absolute;
+    top: 12px;
+    right: 30px;
+}

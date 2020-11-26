@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     closeProfileContext()
     document.querySelector('main').addEventListener('click',closeProfileContext)
- 
 })
 
 
