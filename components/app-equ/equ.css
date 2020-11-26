@@ -1,6 +1,14 @@
 div{
-    background-color: greenyellow;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: var(--base-color);
+    width: 300px;
 }
-button:hover{
-    background-color: green;
+app-slider
+{
+    position: relative;
+    margin: 0 5px;
 }
