@@ -1,5 +1,5 @@
-import { Component } from "../../../framework/components/component.js";
-import { CancionesService } from "../../services/moks.service.js";
+import { Component } from "/framework/components/component.js";
+import { CancionesService } from "/services/moks.service.js";
 import { TestChild } from "./custom-test-child/test-child.js";
 
 
