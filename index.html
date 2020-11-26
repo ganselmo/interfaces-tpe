@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spoiler Five</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
     <header>
         <spoiler-header></spoiler-header>
+        <app-buscador id="lupaBuscador"></app-buscador>
         <context-menu id="profile-menu" class="profile-menu" menus='[
         {"name":"Perfil","link":"profile"},
         {"name":"Notificaciones","link":"notif"},
@@ -29,6 +31,7 @@
     <div class="modal"></div>
     <script type='module' src="js/main.js"></script>
     <script type='module' src="js/context-menu.handler.js"></script>
+    <script type='module' src="js/buscador.handler.js"></script>
 </body>
 
 </html>

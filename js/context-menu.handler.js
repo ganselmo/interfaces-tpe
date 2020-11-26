@@ -15,8 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 export function openProfileContext() {
     contextMenu.style.visibility = 'initial'
+    contextMenu.style.height = 'auto'
 }
 
 export function closeProfileContext() {
     contextMenu.style.visibility = 'hidden'
+    contextMenu.style.height = '0'
 }
