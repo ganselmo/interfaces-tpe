@@ -1,4 +1,4 @@
-import { Component } from "/interfaces-tpe/framework/components/component.js";
+import { Component } from "../../../framework/components/component.js";
 
 
 export class EquComponent extends Component {
