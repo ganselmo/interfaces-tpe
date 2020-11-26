@@ -299,6 +299,7 @@ h4 {
     width: 90%;
     height: 50px;
     font-size: var(--h3-font);
+<<<<<<< HEAD
 }
 
 a {
@@ -309,4 +310,13 @@ a {
 .profile-menu{
     position: absolute;
     right: 0;
+=======
+   
+}
+
+.extends{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+>>>>>>> bd1d06e2ef11be4f5d004a539860ab4e25a9bfde
 }
