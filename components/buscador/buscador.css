@@ -3,6 +3,7 @@
     background-color: var(--base-color);
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
 }
 .buscador input.input.block{
@@ -12,6 +13,6 @@
 
 .lupa{
     position: absolute;
-    top: 12px;
+    top: 17px;
     right: 30px;
 }
