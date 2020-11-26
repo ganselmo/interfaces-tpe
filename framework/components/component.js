@@ -18,7 +18,6 @@ export class Component extends HTMLElement {
                             element.init()
                             let observer = new MutationObserver(function (mutations) {
                                 mutations.forEach(function (mutation) {
-                                    console.log(mutation)
                                     if (mutation.type == "attributes") {
                                         element.changes() 
 

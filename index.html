@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spoiler Five</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
     <header>
         <spoiler-header></spoiler-header>
+        <context-menu id="profile-menu" class="profile-menu" menus='[
+        {"name":"Perfil","link":"profile"},
+        {"name":"Notificaciones","link":"notif"},
+        {"name":"Ayuda","link":"help"},
+        {"name":"Salir","link":"exit"}]'></context-menu>
     </header>
 
     <main>
-
+        <context-menu class="music-menu" menus='[
+        {"name":"Perfil","link":"profile"},
+        {"name":"Notificaciones","link":"notif"},
+        {"name":"Ayuda","link":"help"},
+        {"name":"Salir","link":"exit"}]'></context-menu>
     </main>
 
     <footer>
@@ -21,5 +32,7 @@
 
     <div class="modal"></div>
     <script type='module' src="js/main.js"></script>
+    <script type='module' src="js/context-menu.handler.js"></script>
 </body>
+
 </html>

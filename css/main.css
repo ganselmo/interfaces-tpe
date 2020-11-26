@@ -305,3 +305,8 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
+.profile-menu{
+    position: absolute;
+    right: 0;
+}
