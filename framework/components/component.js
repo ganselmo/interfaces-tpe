@@ -37,7 +37,7 @@ export class Component extends HTMLElement {
         )
         let mainSheet;
         let componentSheet;
-        fetch('/css/main.css').then(
+        fetch('/interfaces-tpe/css/main.css').then(
             response => {
       
                 if (response.ok) {
