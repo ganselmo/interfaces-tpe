@@ -1,5 +1,5 @@
 
-import { addCSS, findInAdopted } from "/js/adopted-css.js";
+import { addCSS, findInAdopted } from "./js/adopted-css.js";
 
 
 
