@@ -13,7 +13,7 @@ export class FilterComponent extends Component {
     }
 
     init() {
-        console.log(this.attributes.name.value)
+      
         this.shadowRoot.querySelector('button').innerHTML =this.attributes.name.value
         let element = this
         element.shadowRoot.querySelector('button').addEventListener('click',function()

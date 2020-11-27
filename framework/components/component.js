@@ -72,7 +72,7 @@ export class Component extends HTMLElement {
             }
         )
 
-       
+
 
  
 
@@ -95,4 +95,5 @@ export class Component extends HTMLElement {
             });
         this.parentNode.parentNode.host.dispatchEvent(event);
     }
+
 }

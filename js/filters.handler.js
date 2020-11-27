@@ -1,7 +1,7 @@
 
 let filters = document.querySelector('#filters-panel');
 document.addEventListener("DOMContentLoaded", function () {
-    console.log(filters)
+
     filters.addEventListener('openFilters',openFilters)
 
     filters.addEventListener('closeFilters',closeFilters)

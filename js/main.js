@@ -12,9 +12,12 @@ import { ModeComponent } from '../Components/app-mode/mode.js';
 import { OptionsComponent } from '../Components/app-options-mov/options-mov.js';
 import { PlayerComponent } from '../Components/app-player/player.js';
 import { SliderStateComponent } from '../Components/app-slider-state/slider-state.js';
+import { LandingPage } from '../pages/landing/landing.js';
+import { ProfilePage } from '../pages/profile/profile.js';
 
 document.addEventListener("DOMContentLoaded", async function () {
 
+    //COMPONENTS
     window.customElements.define('custom-test', CustomTest);
     window.customElements.define('spoiler-header', HeaderComponent);
     window.customElements.define('app-equ', EquComponent);
@@ -29,5 +32,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     window.customElements.define('app-options-mov', OptionsComponent);
     window.customElements.define('app-mode', ModeComponent);
 
-
+    //PAGES
+    window.customElements.define('landing-page', LandingPage);
+    window.customElements.define('profile-page', ProfilePage);
 })
