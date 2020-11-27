@@ -1,0 +1,62 @@
+.intro{
+    height: 306px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.content
+{
+    display: flex;
+    flex-direction: row;
+    overflow-x:scroll;
+}
+
+.cuadrad{
+    height: 236px;
+    height: 160px;
+    position: relative;
+    margin: 10px;
+}
+.cuadrad div{
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: 2;
+    visibility: hidden;
+}
+.cuadrad div:hover{
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: 2;
+    visibility: initial;
+}
+.cuadrad img{
+    width: 160px;
+    height: 160px;
+    position: relative;
+
+}
+.titlecontainer{
+    position: relative;
+}
+.title{
+    position: relative;
+    align-self: center;
+    text-align: center;
+    color: var(--primary-color);
+    padding: 0 10px ;
+}
+
+.sub{
+    position: relative;
+    align-self: center;
+    text-align: center;
+    color: var(--primary-color);
+    padding: 0 10px ;
+}

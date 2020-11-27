@@ -22,7 +22,7 @@ export class LandingPage extends Component {
                 elementer.appendChild(contentWrapper)
             }
         )
-            console.log(getCss())
+
     }
     changes() {
 

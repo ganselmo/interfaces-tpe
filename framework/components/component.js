@@ -43,6 +43,7 @@ export class Component extends HTMLElement {
         )
         let mainSheet;
         let componentSheet;
+
         fetch('./css/main.css').then(
             response => {
 
@@ -51,15 +52,14 @@ export class Component extends HTMLElement {
                         data => {
                             mainSheet = new CSSStyleSheet
                             mainSheet.replaceSync(data)
-
                         }
                     ).then(
                         () => {
 
-
-                            if (findInAdopted(cssUrl)) {
-                                console.log('Ya estaba')
-                                this.shadowRoot.adoptedStyleSheets = [mainSheet, componentSheet]
+                            let found = findInAdopted(cssUrl)
+                            if (found) {
+                               
+                                this.shadowRoot.adoptedStyleSheets = [mainSheet, found.value]
                             }
                             else {
 
@@ -71,8 +71,9 @@ export class Component extends HTMLElement {
                                                 data => {
                                                     componentSheet = new CSSStyleSheet
                                                     componentSheet.replaceSync(data)
-
+                                                    addCSS({ name: cssUrl, value: componentSheet })
                                                     this.shadowRoot.adoptedStyleSheets = [mainSheet, componentSheet]
+
                                                 }
                                             );
 
@@ -82,7 +83,7 @@ export class Component extends HTMLElement {
                                 )
 
                             }
-                            addCSS(cssUrl)
+
                         }
 
                     );
