@@ -1,7 +1,13 @@
 
+import { addCSS,findInAdopted} from "/js/adopted-css.js";
+
+
+
 export class Component extends HTMLElement {
+
     constructor(url) {
         super();
+      
         url = url.replace(window.location.href, '')
         let cssUrl = url.replace('js', 'css')
         let htmlUrl = url.replace('js', 'html')
@@ -48,23 +54,31 @@ export class Component extends HTMLElement {
                         
                         }
                     ).then(
-                        fetch(cssUrl).then(
-                            response => {
-                      
-                                if (response.ok) {
-                                    response.text().then(
-                                        data => {
-                                            componentSheet = new CSSStyleSheet
-                                            componentSheet.replaceSync(data)
-                              
-                                            this.shadowRoot.adoptedStyleSheets = [mainSheet,componentSheet]
-                                        }
-                                    );
-                
+                        ()=>
+                        {
+                         
+                  
+                            console.log(findInAdopted(cssUrl))
+                            addCSS(cssUrl)
+                            fetch(cssUrl).then(
+                                response => {
+                         
+                                    if (response.ok) {
+                                        response.text().then(
+                                            data => {
+                                                componentSheet = new CSSStyleSheet
+                                                componentSheet.replaceSync(data)
+                                  
+                                                this.shadowRoot.adoptedStyleSheets = [mainSheet,componentSheet]
+                                            }
+                                        );
+                    
+                                    }
+                    
                                 }
-                
-                            }
-                        )
+                            )
+                        }
+                      
                     );
 
                 }

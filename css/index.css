@@ -5,4 +5,10 @@
 footer{
     position: fixed;
     bottom: 0;
+    width: 100%;
+}
+.profile-menu{
+    position: absolute;
+    right: 0;
+   
 }

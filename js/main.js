@@ -14,6 +14,7 @@ import { PlayerComponent } from '../Components/app-player/player.js';
 import { SliderStateComponent } from '../Components/app-slider-state/slider-state.js';
 import { LandingPage } from '../pages/landing/landing.js';
 import { ProfilePage } from '../pages/profile/profile.js';
+import { ContentWrapperComponent } from '../components/content-wrapper/content-wrapper.js';
 
 document.addEventListener("DOMContentLoaded", async function () {
 
@@ -31,6 +32,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     window.customElements.define('app-slider-state', SliderStateComponent);
     window.customElements.define('app-options-mov', OptionsComponent);
     window.customElements.define('app-mode', ModeComponent);
+    window.customElements.define('content-wrapper', ContentWrapperComponent);
 
     //PAGES
     window.customElements.define('landing-page', LandingPage);

@@ -1,4 +1,5 @@
 import { Component } from "../../framework/components/component.js";
+import { getCss } from "../../js/adopted-css.js";
 import { contenidos } from "../../mocks/contenidos.js";
 
 
@@ -12,16 +13,16 @@ export class LandingPage extends Component {
     }
 
     init() {
+        let elementer = this.shadowRoot
         const section = this.shadowRoot.querySelector('section')
         this.contenido.forEach(
             element => {
-                console.log(element)
-                element.data.forEach(data => {
-                    console.log(data)
-                }
-                )
+                let contentWrapper = document.createElement('content-wrapper')
+                contentWrapper.setAttribute('canciones', JSON.stringify(element))
+                elementer.appendChild(contentWrapper)
             }
         )
+            console.log(getCss())
     }
     changes() {
 
