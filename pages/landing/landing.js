@@ -1,5 +1,5 @@
 import { Component } from "../../framework/components/component.js";
-import { getCss } from "../../js/adopted-css.js";
+
 import { contenidos } from "../../mocks/contenidos.js";
 
 
