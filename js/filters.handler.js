@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     filters.addEventListener('openFilters',openFilters)
 
     filters.addEventListener('closeFilters',closeFilters)
-    
-    console.log(filters)
     closeFilters()
     document.querySelector('main').addEventListener('click',closeFilters)
 })

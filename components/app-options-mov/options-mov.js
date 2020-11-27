@@ -1,4 +1,4 @@
-import { Component } from "../../../framework/components/component.js";
+import { Component } from "../../framework/components/component.js";
 
 
 export class OptionsComponent extends Component {
