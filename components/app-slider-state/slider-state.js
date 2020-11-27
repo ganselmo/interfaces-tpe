@@ -13,9 +13,9 @@ export class SliderStateComponent extends Component {
     state = 1;
 
     init() {
-      let element = this;
-      
-        this.move();
+      /* let element = this; */
+
+       /*  this.move(); */
 
     }
     changes() {
@@ -24,7 +24,7 @@ export class SliderStateComponent extends Component {
     
     move() {
       var elem = document.getElementById("myBar");   
-      var width = state;
+      var width = 1;
       var id = setInterval(frame, 10);
       function frame() {
         if (width >= 100) {

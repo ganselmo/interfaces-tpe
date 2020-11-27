@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     closeEq();
     closeMode();
     closeComand();
-    closePlay();
+
 
     document.querySelector('main').addEventListener('click',closeEq);
     document.querySelector('main').addEventListener('click',closeMode);
@@ -29,33 +29,33 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 export function openEq() {
-    eq.style.visibility = 'initial'
+    eq.style.display = 'initial'
 }
 
 export function closeEq() {
-    eq.style.visibility = 'hidden'
+    eq.style.display = 'none'
 }
 
 export function openComand() {
-    comandPlay.style.visibility = 'initial'
+    comandPlay.style.display = 'initial'
 }
 
 export function closeComand() {
-    comandPlay.style.visibility = 'hidden'
+    comandPlay.style.display = 'none'
 }
 
 export function openMode() {
-    modeSelect.style.visibility = 'initial'
+    modeSelect.style.display = 'initial'
 }
 
 export function closeMode() {
-    modeSelect.style.visibility = 'hidden'
+    modeSelect.style.display = 'none'
 }
 
 export function openPlay() {
-    modeSelect.style.visibility = 'initial'
+    setPlayer.style.display = 'initial'
 }
 
 export function closePlay() {
-    modeSelect.style.visibility = 'hidden'
+    setPlayer.style.display = 'none'
 }

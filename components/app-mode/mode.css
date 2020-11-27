@@ -2,9 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 110px;
+    height: 150px;
     width: 40px;
     background-color: var(--base-color);
+    right: 42px;
+    position: fixed;
+    bottom: 64px;
+    justify-content: space-around;
 }
 
 .oculto{
