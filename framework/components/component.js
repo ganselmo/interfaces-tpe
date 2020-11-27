@@ -1,5 +1,5 @@
 
-import { addCSS,findInAdopted} from "/js/adopted-css.js";
+import { addCSS, findInAdopted } from "/js/adopted-css.js";
 
 
 
@@ -7,12 +7,12 @@ export class Component extends HTMLElement {
 
     constructor(url) {
         super();
-      
+
         url = url.replace(window.location.href, '')
         let cssUrl = url.replace('js', 'css')
         let htmlUrl = url.replace('js', 'html')
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.adoptedStyleSheets =[]
+        this.shadowRoot.adoptedStyleSheets = []
         this.shadowRoot.attributes = this.attributes
         const element = this
         fetch(htmlUrl).then(
@@ -25,7 +25,7 @@ export class Component extends HTMLElement {
                             let observer = new MutationObserver(function (mutations) {
                                 mutations.forEach(function (mutation) {
                                     if (mutation.type == "attributes") {
-                                        element.changes() 
+                                        element.changes()
 
                                     }
                                 });
@@ -45,40 +45,46 @@ export class Component extends HTMLElement {
         let componentSheet;
         fetch('./css/main.css').then(
             response => {
-      
+
                 if (response.ok) {
                     response.text().then(
                         data => {
                             mainSheet = new CSSStyleSheet
                             mainSheet.replaceSync(data)
-                        
+
                         }
                     ).then(
-                        ()=>
-                        {
-                         
-                  
-                            console.log(findInAdopted(cssUrl))
-                            addCSS(cssUrl)
-                            fetch(cssUrl).then(
-                                response => {
-                         
-                                    if (response.ok) {
-                                        response.text().then(
-                                            data => {
-                                                componentSheet = new CSSStyleSheet
-                                                componentSheet.replaceSync(data)
-                                  
-                                                this.shadowRoot.adoptedStyleSheets = [mainSheet,componentSheet]
-                                            }
-                                        );
-                    
+                        () => {
+
+
+                            if (findInAdopted(cssUrl)) {
+                                console.log('Ya estaba')
+                                this.shadowRoot.adoptedStyleSheets = [mainSheet, componentSheet]
+                            }
+                            else {
+
+                                fetch(cssUrl).then(
+                                    response => {
+
+                                        if (response.ok) {
+                                            response.text().then(
+                                                data => {
+                                                    componentSheet = new CSSStyleSheet
+                                                    componentSheet.replaceSync(data)
+
+                                                    this.shadowRoot.adoptedStyleSheets = [mainSheet, componentSheet]
+                                                }
+                                            );
+
+                                        }
+
                                     }
-                    
-                                }
-                            )
+                                )
+
+                            }
+                            addCSS(cssUrl)
                         }
-                      
+
                     );
 
                 }
@@ -88,7 +94,7 @@ export class Component extends HTMLElement {
 
 
 
- 
+
 
 
 

@@ -10,10 +10,6 @@ export function addCSS(adopted) {
 }
 
 export function findInAdopted(adopted) {
-    if (adoptedStyles.find(element => element === adopted)) {
-        return true
-    }
-    else {
-        return false
-    }
+    return adoptedStyles.find(element => element === adopted)
+
 }
