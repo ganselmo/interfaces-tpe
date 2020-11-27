@@ -8,11 +8,13 @@ import { SliderComponent } from '../components/app-slider/slider.js';
 import { CustomTest } from '../components/custom-test/test.js'
 import { MenuComponent } from '../components/menu/context-menu.js';
 import { HeaderComponent } from '../components/spoiler-header/header.js'
-import { ModeComponent } from '../Components/app-mode/mode.js';
-import { OptionsComponent } from '../Components/app-options-mov/options-mov.js';
-import { PlayerComponent } from '../Components/app-player/player.js';
-import { SliderStateComponent } from '../Components/app-slider-state/slider-state.js';
-
+import { ModeComponent } from '../components/app-mode/mode.js';
+import { OptionsComponent } from '../components/app-options-mov/options-mov.js';
+import { PlayerComponent } from '../components/app-player/player.js';
+import { SliderStateComponent } from '../components/app-slider-state/slider-state.js';
+import { ContentWrapperComponent } from '../components/content-wrapper/content-wrapper.js';
+import { LandingPage } from '../pages/landing/landing.js';
+import { ProfilePage } from '../pages/profile/profile.js';
 document.addEventListener("DOMContentLoaded", async function () {
 
     //COMPONENTS
