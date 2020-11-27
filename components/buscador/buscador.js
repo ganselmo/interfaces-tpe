@@ -7,6 +7,8 @@ export class BuscadorComponent extends Component {
 
     closeBuscadorEvent = new CustomEvent("closeBuscador");
     buscador = document.querySelector('#lupaBuscador')
+    filters = document.querySelector('#filters-panel')
+    closeFilterEvent = new CustomEvent("openFilters");
     constructor() {
         super(import.meta.url)
     }
@@ -15,12 +17,14 @@ export class BuscadorComponent extends Component {
         let element = this
         element.shadowRoot.querySelector('.lupa').addEventListener('click',function()
         {
-            let input = element.shadowRoot.querySelector('input')
-            element.find(input.value)
-            input.value = ''
-            element.buscador.dispatchEvent(element.closeBuscadorEvent);
+            // let input = element.shadowRoot.querySelector('input')
+            // element.find(input.value)
+            // input.value = ''
+ 
+            element.filters.dispatchEvent(element.closeFilterEvent);
         
         })
+
     }
     changes() {
 
