@@ -12,8 +12,10 @@ export class ModeComponent extends Component {
     closeEvent = new CustomEvent("closeEq");
     openEvent = new CustomEvent("openEq");
 
+
     init() {
         let element = this
+        let selected = false;
         //#region captura de buttons
         let btnRun= this.shadowRoot.querySelector("#btn_run");
         let btnRunSel= this.shadowRoot.querySelector("#btn_run_sel");
@@ -25,30 +27,45 @@ export class ModeComponent extends Component {
 
         //#region funcionalidad change
         btnRun.addEventListener('click',function(){
+            if(!selected){
             this.classList.toggle("oculto");
             btnRunSel.classList.toggle("oculto");
+            selected = true;
+            }
         });
         btnRunSel.addEventListener('click',function(){
             this.classList.toggle("oculto");
             btnRun.classList.toggle("oculto");
+            selected = false;
+
         });
 
         btnWork.addEventListener('click',function(){
+            if(!selected){
             this.classList.toggle("oculto");
             btnWorkSel.classList.toggle("oculto");
+            selected = true;
+            }
         });
         btnWorkSel.addEventListener('click',function(){
             this.classList.toggle("oculto");
             btnWork.classList.toggle("oculto");
+            selected = false;
+
         });
 
         btnTrial.addEventListener('click',function(){
+            if(!selected){
             this.classList.toggle("oculto");
             btnTrialSel.classList.toggle("oculto");
+            selected = true;
+        }
+
         });
         btnTrialSel.addEventListener('click',function(){
             this.classList.toggle("oculto");
             btnTrial.classList.toggle("oculto");
+            selected = false;
         });
         //#endregion
 
@@ -61,11 +78,11 @@ export class ModeComponent extends Component {
 
 
 
-        /* function modificar() {
+        function modificar() {
             setTimeout(function(){ 
             element.parent.dispatchEvent(element.openEvent);
             }, 1000);
-        } */
+        }
         
     }
     changes() {

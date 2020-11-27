@@ -1,3 +1,19 @@
 *{
     overflow-x: hidden;
 }
+
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+}
+
+.extends{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    bottom: 60px;
+}
