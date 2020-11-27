@@ -15,6 +15,7 @@ import { SliderStateComponent } from '../Components/app-slider-state/slider-stat
 
 document.addEventListener("DOMContentLoaded", async function () {
 
+    //COMPONENTS
     window.customElements.define('custom-test', CustomTest);
     window.customElements.define('spoiler-header', HeaderComponent);
     window.customElements.define('app-equ', EquComponent);
@@ -28,6 +29,9 @@ document.addEventListener("DOMContentLoaded", async function () {
     window.customElements.define('app-slider-state', SliderStateComponent);
     window.customElements.define('app-options-mov', OptionsComponent);
     window.customElements.define('app-mode', ModeComponent);
+    window.customElements.define('content-wrapper', ContentWrapperComponent);
 
-
+    //PAGES
+    window.customElements.define('landing-page', LandingPage);
+    window.customElements.define('profile-page', ProfilePage);
 })
