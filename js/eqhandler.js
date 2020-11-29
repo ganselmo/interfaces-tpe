@@ -1,6 +1,8 @@
 let eq = document.querySelector("#equalizer");
 let comandPlay = document.querySelector("#comand_player");
 let modeSelect = document.querySelector("#mode");
+let setPlayer = document.querySelector("#player");
+
 
 document.addEventListener("DOMContentLoaded", function () {
     comandPlay.addEventListener('openComand',openComand);
@@ -9,38 +11,51 @@ document.addEventListener("DOMContentLoaded", function () {
     eq.addEventListener('closeEq',closeEq);
     modeSelect.addEventListener('openMode',openMode);
     modeSelect.addEventListener('closeMode',closeMode);
+    setPlayer.addEventListener('openPlay',openPlay);
+    setPlayer.addEventListener('closePlay',closePlay);
 
 
     closeEq();
     closeMode();
     closeComand();
 
+
     document.querySelector('main').addEventListener('click',closeEq);
     document.querySelector('main').addEventListener('click',closeMode);
     document.querySelector('main').addEventListener('click',closeComand);
+    document.querySelector('main').addEventListener('click',closePlay);
+
 
 })
 
 export function openEq() {
-    eq.style.visibility = 'initial'
+    eq.style.display = 'initial'
 }
 
 export function closeEq() {
-    eq.style.visibility = 'hidden'
+    eq.style.display = 'none'
 }
 
 export function openComand() {
-    comandPlay.style.visibility = 'initial'
+    comandPlay.style.display = 'initial'
 }
 
 export function closeComand() {
-    comandPlay.style.visibility = 'hidden'
+    comandPlay.style.display = 'none'
 }
 
 export function openMode() {
-    modeSelect.style.visibility = 'initial'
+    modeSelect.style.display = 'initial'
 }
 
 export function closeMode() {
-    modeSelect.style.visibility = 'hidden'
+    modeSelect.style.display = 'none'
+}
+
+export function openPlay() {
+    setPlayer.style.display = 'initial'
+}
+
+export function closePlay() {
+    setPlayer.style.display = 'none'
 }

@@ -5,7 +5,12 @@ div{
     justify-content: center;
     flex-direction: row;
     background-color: var(--base-color);
-    width: 300px;
+    width: 266px;
+    right: 84px;
+    position: fixed;
+    bottom: 64px;
+    justify-content: flex-end;
+
 }
 app-slider
 {

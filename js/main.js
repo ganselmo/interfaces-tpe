@@ -9,13 +9,23 @@ import { SliderComponent } from '../components/app-slider/slider.js';
 import { CustomTest } from '../components/custom-test/test.js'
 import { MenuComponent } from '../components/menu/context-menu.js';
 import { HeaderComponent } from '../components/spoiler-header/header.js'
-import { ModeComponent } from '../Components/app-mode/mode.js';
-import { OptionsComponent } from '../Components/app-options-mov/options-mov.js';
-import { PlayerComponent } from '../Components/app-player/player.js';
-import { SliderStateComponent } from '../Components/app-slider-state/slider-state.js';
+import { ModeComponent } from '../components/app-mode/mode.js';
+import { OptionsComponent } from '../components/app-options-mov/options-mov.js';
+import { PlayerComponent } from '../components/app-player/player.js';
+import { SliderStateComponent } from '../components/app-slider-state/slider-state.js';
+import { ContentWrapperComponent } from '../components/content-wrapper/content-wrapper.js';
+import { AccordComponent } from '../components/app-acord/acord.js';
+
+//Pages
+import { LandingPage } from '../pages/landing/landing.js';
+import { ProfilePage } from '../pages/profile/profile.js';
+import { HelpPage } from '../pages/help/help.js';
+
+
 
 document.addEventListener("DOMContentLoaded", async function () {
 
+    //COMPONENTS
     window.customElements.define('custom-test', CustomTest);
     window.customElements.define('spoiler-header', HeaderComponent);
     window.customElements.define('app-equ', EquComponent);
@@ -30,6 +40,11 @@ document.addEventListener("DOMContentLoaded", async function () {
     window.customElements.define('app-slider-state', SliderStateComponent);
     window.customElements.define('app-options-mov', OptionsComponent);
     window.customElements.define('app-mode', ModeComponent);
+    window.customElements.define('content-wrapper', ContentWrapperComponent);
+    window.customElements.define('app-accord', AccordComponent);
 
-
+    //PAGES
+    window.customElements.define('landing-page', LandingPage);
+    window.customElements.define('profile-page', ProfilePage);
+    window.customElements.define('help-page', HelpPage);
 })

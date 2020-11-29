@@ -1,7 +1,6 @@
 
 let buscador = document.querySelector('#lupaBuscador');
 document.addEventListener("DOMContentLoaded", function () {
-    console.log(buscador)
     buscador.addEventListener('openBuscador',openBuscador)
 
     buscador.addEventListener('closeBuscador',closeBuscador)

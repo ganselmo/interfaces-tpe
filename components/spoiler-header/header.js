@@ -15,7 +15,6 @@ export class HeaderComponent extends Component {
     
     init() {
         let profile = this.shadowRoot.querySelector('#profile')
-        console.log(profile)
         let elementer = this
         profile.addEventListener('click',
             function () {
@@ -53,7 +52,7 @@ export class HeaderComponent extends Component {
         return this.buscador.style.display
     }
     openLupa() {
-        console.log(this.getBuscadorStatus())
+
         if (this.getBuscadorStatus() === 'none') {
             this.buscador.dispatchEvent(this.openBuscadorEvent);
         }

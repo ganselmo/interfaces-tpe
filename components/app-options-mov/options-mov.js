@@ -1,4 +1,4 @@
-import { Component } from "../../../framework/components/component.js";
+import { Component } from "../../framework/components/component.js";
 
 
 export class OptionsComponent extends Component {
@@ -10,6 +10,7 @@ export class OptionsComponent extends Component {
   parent =  document.querySelector('#equalizer');
   closeEvent = new CustomEvent("closeEq");
   openEvent = new CustomEvent("openEq");
+  
   modeparent= document.querySelector('#mode');
   closeMode= new CustomEvent("closeMode");
   openMode= new CustomEvent("openMode");
@@ -27,6 +28,8 @@ export class OptionsComponent extends Component {
     let btnRandomSel = this.shadowRoot.querySelector("#btn_randomsel");
     let btnRepeat = this.shadowRoot.querySelector("#btn_repeat");
     let btnRepeatSel = this.shadowRoot.querySelector("#btn_repeatsel");
+    let btnScore = this.shadowRoot.querySelector("#btn_score");
+    let btnScored = this.shadowRoot.querySelector("#btn_scored");
   //#endregion
   //#region cambios de estado
  
@@ -76,6 +79,15 @@ export class OptionsComponent extends Component {
       this.classList.toggle("oculto");
       btnRepeat.classList.toggle("oculto");
 
+    });
+    // respectivo a score
+    btnScore.addEventListener('click', function(){
+      this.classList.toggle("oculto");
+      btnScored.classList.toggle("oculto");
+     });
+    btnScored.addEventListener('click', function(){
+      this.classList.toggle("oculto");
+      btnScore.classList.toggle("oculto");
     });
 
   //#endregion

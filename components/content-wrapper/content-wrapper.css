@@ -1,0 +1,132 @@
+.intro {
+    height: 306px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 15px 0;
+    padding: 0px;
+    width: auto;
+    align-self: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+.content {
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+.cuadrad {
+    height: 160px;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: content-box;
+}
+
+.cuadrad div.name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    visibility: hidden;
+}
+
+.cuadrad img {
+    box-sizing: content-box;
+    width: 160px;
+    height: 160px;
+    position: relative;
+}
+
+.titlecontainer {
+    position: relative;
+    margin: 10px 0;
+}
+
+.title {
+    position: relative;
+    align-self: center;
+    text-align: center;
+    color: var(--primary-color);
+    padding: 0 10px;
+}
+
+.sub {
+    position: relative;
+    align-self: center;
+    text-align: center;
+    color: var(--primary-color);
+    padding: 0 10px;
+    margin: 10px 0;
+}
+
+.playButton {
+    height: 40%;
+    width: 40%;
+    visibility: hidden;
+    z-index: 10;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s;
+}
+
+.playButton img {
+    width: 55%;
+    height: 55%;
+    margin: 0px 0px 0px 10%;
+}
+
+@media (min-width: 600px) and (max-width:1200px) {
+    .intro {
+        margin: 20px 5px;
+        padding: 0px;
+    }
+    .cuadrad:hover>.playButton {
+        visibility: inherit;
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+}
+
+@media (min-width:1200px) {
+    .intro {
+        margin: 30px 25px;
+        padding: 0px;
+        height: 346px;
+    }
+    .cuadrad {
+        height: 200px;
+        position: relative;
+        padding: 10px;
+        margin: 10px 0px;
+        box-sizing: content-box;
+    }
+    .cuadrad img {
+        box-sizing: content-box;
+        width: 200px;
+        height: 200px;
+        position: relative;
+    }
+    .content {}
+    .cuadrad:hover>.playButton {
+        visibility: inherit;
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+    .playButton img {
+        width: 55%;
+        height: 55%;
+        margin: 0px 0px 0px 10%;
+    }
+    
+}

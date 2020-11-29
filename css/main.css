@@ -28,6 +28,13 @@
     src: url("../assets/fonts/Montserrat/Montserrat-Black.ttf");
 }
 
+* {
+    font-family: "Montserrat";
+    margin: 0;
+    padding: 0;
+ 
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -44,11 +51,6 @@ body {
     --h2-font: 36px;
     --h1-font: 48px;
 }
-
-* {
-    font-family: "Montserrat";
-}
-
 button:disabled, button[disabled] {
     background-color: var(--disabled-color);
     color: var(--primary-color);
@@ -306,14 +308,23 @@ a {
     text-decoration: none;
 }
 
-.profile-menu{
-    position: absolute;
-    right: 0;
-   
+
+@media (min-width: 600px)  {
+    
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
 }
 
-.extends{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
 }

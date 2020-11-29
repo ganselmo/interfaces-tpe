@@ -1,11 +1,13 @@
 import { Component } from "../../framework/components/component.js";
+import { navigateRouter } from "../../js/router.handler.js";
 
 export class MenuComponent extends Component {
 
     constructor() {
         super(import.meta.url)
     }
-
+    contextMenu = document.querySelector('#profile-menu')
+    closeContextEvent = new CustomEvent("closeContext");
     init() {
 
         let array = JSON.parse(this.attributes.menus.value)
@@ -33,6 +35,8 @@ export class MenuComponent extends Component {
 
     }
     goTo(location) {
-        console.log(location)
+        this.contextMenu.dispatchEvent(this.closeContextEvent);
+        navigateRouter(location)
+
     }
 }

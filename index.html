@@ -14,31 +14,26 @@
         <spoiler-header></spoiler-header>
         <app-buscador id="lupaBuscador"></app-buscador>
         <context-menu id="profile-menu" class="profile-menu" menus='[
-        {"name":"Perfil","link":"profile"},
+        {"name":"Perfil","link":"profile-page"},
         {"name":"Notificaciones","link":"notif"},
-        {"name":"Ayuda","link":"help"},
+        {"name":"Ayuda","link":"help-page"},
         {"name":"Salir","link":"exit"}]'></context-menu>
-        <app-filters filters='[
+        <app-filters id = "filters-panel" filters='[
         {"name":"Playlist","value":"pl"},
         {"name":"Canciones","value":"song"},
         {"name":"Podcasts","value":"pcst"},
         {"name":"Albumes","link":"albums"},
         {"name":"Artistas","link":"artists"}]'></app-filters>
     </header>
-
-    <main>
-
+    <main id="routerLink">
         
     </main>
-
     <footer>
-        <div class="extends">
-            <app-equ id="equalizer"></app-equ>
-            <app-mode id="mode"></app-mode>
-            <app-options-mov id="comand_player"></app-options-mov>
-        </div>  
-        <app-slider-state></app-slider-state>
-        <app-player></app-player>
+        <app-equ id="equalizer"></app-equ>
+        <app-mode id="mode"></app-mode> 
+        <app-options-mov id="comand_player"></app-options-mov>
+        <app-slider-state></app-slider-state> 
+        <app-player id="player"></app-player>
     </footer>
 
     <div class="modal"></div>
@@ -46,6 +41,7 @@
     <script type='module' src="js/context-menu.handler.js"></script>
     <script type='module' src="js/buscador.handler.js"></script>
     <script type='module' src="js/eqhandler.js"></script>
+    <script type='module' src="js/filters.handler.js"></script>
 </body>
 
 </html>
