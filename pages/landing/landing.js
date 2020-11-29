@@ -24,12 +24,9 @@ export class LandingPage extends Component {
         )
 
     }
+    
     changes() {
 
     }
-
-
-
-
 
 }
