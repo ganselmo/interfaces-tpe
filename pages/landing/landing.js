@@ -11,15 +11,14 @@ export class LandingPage extends Component {
     constructor() {
         super(import.meta.url)
     }
-
     init() {
-        let elementer = this.shadowRoot
+
         const section = this.shadowRoot.querySelector('section')
         this.contenido.forEach(
             element => {
                 let contentWrapper = document.createElement('content-wrapper')
                 contentWrapper.setAttribute('canciones', JSON.stringify(element))
-                elementer.appendChild(contentWrapper)
+                section.appendChild(contentWrapper)
             }
         )
 

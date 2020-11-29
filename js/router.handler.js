@@ -11,7 +11,6 @@ export function navigateRouter(path) {
 document.addEventListener("DOMContentLoaded", async function () {
 
 
-    console.log(routerOutlet)
 
     routerOutlet.addEventListener('routerDispatcher', function (e) {
         dispatchTo(e.detail)

@@ -10,7 +10,7 @@ export class ContentWrapperComponent extends Component {
     init() {
 
         let canciones = JSON.parse(this.attributes.canciones.value)
-        console.log(canciones)
+
         let divTitle = this.shadowRoot.querySelector('.title')
         divTitle.innerHTML = canciones.title
 

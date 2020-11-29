@@ -1,4 +1,5 @@
 import { Component } from "../../framework/components/component.js";
+import { navigateRouter } from "../../js/router.handler.js";
 
 
 export class ProfilePage extends Component {
@@ -9,7 +10,10 @@ export class ProfilePage extends Component {
     }
 
     init() {
-        
+        let atrasButton = this.shadowRoot.querySelector('.atras')
+        atrasButton.addEventListener('click',function(){
+            navigateRouter('landing-page')
+        })
     }
     changes() {
 
