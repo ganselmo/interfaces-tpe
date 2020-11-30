@@ -8,10 +8,10 @@ export class CommentReplyComponent extends Component {
     }
 
     init() {
-         //#region Seccion Calificacion
-         let replyIcon = this.shadowRoot.querySelector(".comment-reply");
-         replyIcon.classList.add("invisible");
-         //#endregion
+        //#region Seccion Calificacion
+        let footer = this.shadowRoot.querySelector(".comment-footer");
+        footer.classList.add("oculto");
+        //#endregion
 
         //#region Score Stars
         let scoreStars = this.shadowRoot.querySelectorAll(".score");

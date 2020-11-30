@@ -9,8 +9,8 @@ export class CommentInsertComponent extends Component {
 
     init() {
         //#region Seccion Calificacion
-        let scoreContainer = this.shadowRoot.querySelector(".score-container");
-        scoreContainer.classList.add("oculto");
+        let header = this.shadowRoot.querySelector(".comment-header");
+        header.classList.add("oculto");
         //#endregion
         
         //#region Score Stars

@@ -2,23 +2,30 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     /* Coment */
     width: 355px;
-    height: 105px;
+    height: auto;
     left: 10px;
     /* GreyDisabled */
     background: var(--disabled-color);
     border-radius: 20px;
-    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.comment-container>section {
+    margin-top: 5px;
 }
 
 .comment-header {
     width: 335px;
     height: 20px;
     display: flex;
-    justify-content: baseline;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -72,4 +79,28 @@
 
 .oculto {
     display: none;
+}
+
+@media (min-width: 600px) {
+    .comment-container {
+        left: 200px;
+        width: 60%;
+    }
+
+    .comment-header {
+        width: 90%;
+    }
+
+    .comment-header .comment-date > div,  .comment-header .comment-autor > div{
+        font-size: var(--normal-font);
+    }
+
+    .comment-body {
+        width: 90%;
+        height: auto;
+    }
+
+    .comment-footer {
+        width: 90%;
+    }
 }
