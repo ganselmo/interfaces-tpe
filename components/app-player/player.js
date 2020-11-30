@@ -22,6 +22,8 @@ export class PlayerComponent extends Component {
         let btnPlay = this.shadowRoot.querySelector("#btn_play");
         let btnPause = this.shadowRoot.querySelector("#btn_pause");
         let btnOption = this.shadowRoot.querySelector("#btn_options");
+        let spiner = this.shadowRoot.querySelector("#spiner");
+        spiner.classList.toggle("button_oculto");
         //#endregion
         //#region accionamiento Botones consola 
         btnLike.addEventListener('click', function(){
@@ -42,10 +44,15 @@ export class PlayerComponent extends Component {
         }); */
 
 
-        btnPlay.addEventListener('click',function (){
-            this.classList.toggle("button_oculto");
-            btnPause.classList.toggle("button_oculto");
+        btnPlay.addEventListener('click',function() {
+            spiner.classList.toggle("button_oculto");
+            setTimeout(function(){
+                spiner.classList.toggle("button_oculto");
+                btnPlay.classList.toggle("button_oculto");
+                btnPause.classList.toggle("button_oculto");
+            }, 2000);
         });
+
         btnPause.addEventListener('click',function (){
             this.classList.toggle("button_oculto");
             btnPlay.classList.toggle("button_oculto");

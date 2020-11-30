@@ -18,12 +18,12 @@ document.addEventListener("DOMContentLoaded", function () {
     closeEq();
     closeMode();
     closeComand();
+    //closePlay();
 
 
     document.querySelector('main').addEventListener('click',closeEq);
     document.querySelector('main').addEventListener('click',closeMode);
     document.querySelector('main').addEventListener('click',closeComand);
-    document.querySelector('main').addEventListener('click',closePlay);
 
 
 })
