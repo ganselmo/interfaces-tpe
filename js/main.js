@@ -13,7 +13,6 @@ import { HeaderComponent } from '../components/spoiler-header/header.js'
 import { ModeComponent } from '../components/app-mode/mode.js';
 import { OptionsComponent } from '../components/app-options-mov/options-mov.js';
 import { PlayerComponent } from '../components/app-player/player.js';
-import { SliderStateComponent } from '../components/app-slider-state/slider-state.js';
 import { ContentWrapperComponent } from '../components/content-wrapper/content-wrapper.js';
 import { AccordComponent } from '../components/app-acord/acord.js';
 
@@ -37,7 +36,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     window.customElements.define('app-filter', FilterComponent);
     window.customElements.define('app-slider', SliderComponent);
     window.customElements.define('app-player', PlayerComponent);
-    window.customElements.define('app-slider-state', SliderStateComponent);
     window.customElements.define('app-options-mov', OptionsComponent);
     window.customElements.define('app-mode', ModeComponent);
     window.customElements.define('content-wrapper', ContentWrapperComponent);

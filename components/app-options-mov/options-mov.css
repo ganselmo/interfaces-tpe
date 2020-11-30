@@ -14,3 +14,18 @@
 .oculto{
   display: none;
 }
+
+@media(min-width: 600px) {
+  #btn_score{
+    display: none;
+  }
+
+  .option{
+    visibility: visible;
+    position: absolute;
+    flex-direction: row;
+    width: 150px;
+    height: 40px;
+    bottom: 10px;
+  }
+}

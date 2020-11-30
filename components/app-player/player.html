@@ -1,22 +1,31 @@
-<section>
+<section class="progress">
+    <div id="myProgress">
+        <div id="myBar"></div>
+    </div>
+</section>
+<section class="player">
     <div class="icon_actual"></div>
     <div class="text_info">
         <div class="text_movil">
-            <marquee class="normal"> Tema que estas escuchando </marquee>
-            <marquee class="normal">Nombre del artista</marquee>
+            <marquee class="normal"> 
+                <p> Tema que estas escuchando </p>
+                <p> Artista </p>
+            </marquee>
+            <!-- <marquee class="normal"> Tema que estas escuchando </marquee>
+            <marquee class="normal">Nombre del artista</marquee> -->
         </div>
-        <div class="text_desck">
-            <p class="normal">Tema que estas escuchando</p>
-            <span class="normal"> nombre del artista</span>
+        <div class="text_desck normal">
+            <p> Tema que estas escuchando </p>
+            <p> Artista </p>
         </div>
     </div>
     <div class="social">
         <button id="btn_like"><img src="./assets/buttons/button_like.svg" alt="liked"></button>
         <button id="btn_liked" class="button_oculto"><img src="./assets/buttons/button_liked.svg" alt="liked"></button>
-
-        <button id="btn_score_desk" class="button_desktop"><img src="./assets/buttons/button_score.svg" alt=""></button>
-        <button id="btn_scored_desk" class="button_oculto"><img src="./assets/buttons/button_scored.svg" alt=""></button>
-
+        <div class="button_desktop">
+            <button id="btn_score_desk"><img src="./assets/buttons/button_score.svg" alt=""></button>
+            <button id="btn_scored_desk" class="button_oculto"><img src="./assets/buttons/button_scored.svg" alt=""></button>
+        </div>
     </div>
     <div class="player_buttons">    
             <button class="btn_next"><img src="./assets/icons/icon-prew.svg"></button>
@@ -29,7 +38,7 @@
     </div>
     <div class="comandos">
         <button class="options"><img src="./assets/icons/icon-volumen.svg" alt=""></button>
-        
+
         <button class="options" id="btn_options"><img src="./assets/icons/icon-dotoptions.svg" alt=""></button>
     </div>
 </section>

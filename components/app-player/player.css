@@ -1,4 +1,4 @@
-section{
+.player{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -8,6 +8,32 @@ section{
     justify-content: space-around;
     overflow: hidden;
 }
+
+.progress{
+  height: 7px;
+  width: 100%;
+  align-items: center;
+  bottom: 62px;
+  background-color: var(--base-color);
+}
+
+
+#myProgress {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  background-color: #f4f4f4;
+  border-radius: 15px;
+}
+
+#myBar {
+  position: absolute;
+  width: 1%;
+  height: 5px;
+  background-color: #cf7500;
+  border-radius: 15px;
+}
+
 
 /*******************PayerConsole*******************/
 
@@ -121,6 +147,10 @@ section{
     display: inherit;
   }
 
+  #btn_options{
+    display: none;
+  }
+
   .icon_actual{
     width: 50px;
     height: 50px;
@@ -140,12 +170,19 @@ section{
   .text_movil{
     display: none;
   }
-.text_info{
-  width: 15%;
-}
+
 
   .text_desck{
     display: inherit;
+    width: 100px;
+    white-space:nowrap
+
+
+  }
+
+  #myProgress {
+    width: 50%;
+    left: 25%;
   }
 
 }
