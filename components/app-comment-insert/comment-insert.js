@@ -1,7 +1,7 @@
 import { Component } from "../../../framework/components/component.js";
 
 
-export class CommentComponent extends Component {
+export class CommentInsertComponent extends Component {
 
     constructor() {
         super(import.meta.url);

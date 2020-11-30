@@ -215,6 +215,14 @@ h4 {
     height: 28px;
 }
 
+.input.lg {
+    font-style: normal;
+    line-height: 17px;
+    font-size: var(--normal-font);
+    width: 280px;
+    height: 30px;
+}
+
 .image {
     background-color: var(--disabled-color);
     border-radius: 10px;
