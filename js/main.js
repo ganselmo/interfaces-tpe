@@ -16,6 +16,7 @@ import { SliderStateComponent } from '../components/app-slider-state/slider-stat
 import { ContentWrapperComponent } from '../components/content-wrapper/content-wrapper.js';
 import { AccordComponent } from '../components/app-acord/acord.js';
 import { CommentInsertComponent } from '../components/app-comment-insert/comment-insert.js';
+import { CommentReplyComponent } from '../components/app-comment-reply/comment-reply.js';
 
 //Pages
 import { LandingPage } from '../pages/landing/landing.js';
@@ -44,6 +45,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     window.customElements.define('content-wrapper', ContentWrapperComponent);
     window.customElements.define('app-accord', AccordComponent);
     window.customElements.define('app-comment-insert', CommentInsertComponent);
+    window.customElements.define('app-comment-reply', CommentReplyComponent);
 
     //PAGES
     window.customElements.define('landing-page', LandingPage);

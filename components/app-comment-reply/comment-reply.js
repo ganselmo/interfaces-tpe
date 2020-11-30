@@ -1,18 +1,18 @@
 import { Component } from "../../../framework/components/component.js";
 
 
-export class CommentInsertComponent extends Component {
+export class CommentReplyComponent extends Component {
 
     constructor() {
         super(import.meta.url);
     }
 
     init() {
-        //#region Seccion Calificacion
-        let scoreContainer = this.shadowRoot.querySelector(".score-container");
-        scoreContainer.classList.add("oculto");
-        //#endregion
-        
+         //#region Seccion Calificacion
+         let replyIcon = this.shadowRoot.querySelector(".comment-reply");
+         replyIcon.classList.add("invisible");
+         //#endregion
+
         //#region Score Stars
         let scoreStars = this.shadowRoot.querySelectorAll(".score");
 

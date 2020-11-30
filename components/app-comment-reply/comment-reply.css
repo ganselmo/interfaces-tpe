@@ -6,7 +6,7 @@
     align-items: center;
     /* Coment */
     width: 355px;
-    height: 105px;
+    height: 90px;
     left: 10px;
     /* GreyDisabled */
     background: var(--disabled-color);
@@ -51,17 +51,8 @@
 
 .comment-body {
     width: 335px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.comment-insert {
-    width: 335px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    height: 15px;
+    overflow: hidden;
 }
 
 .comment-footer {
@@ -72,6 +63,17 @@
     align-items: center;
 }
 
+.comment-footer-options {
+    width: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .oculto {
     display: none;
+}
+
+.invisible {
+    visibility: hidden;
 }
