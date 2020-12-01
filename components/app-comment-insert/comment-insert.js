@@ -30,6 +30,14 @@ export class CommentInsertComponent extends Component {
         }
         //#endregion
 
+        let summit = this.shadowRoot.querySelector(".comment-summit");
+        summit.addEventListener("click", ocultar);
+        
+        function ocultar() {
+            let container = this.parentElement.parentElement;
+            console.log(this.parentElement);
+            container.classList.add("oculto");
+        }
         //#region Score Stars
         let scoreStars = this.shadowRoot.querySelectorAll(".score");
 
