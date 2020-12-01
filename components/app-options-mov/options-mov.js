@@ -15,12 +15,13 @@ export class OptionsComponent extends Component {
   closeMode= new CustomEvent("closeMode");
   openMode= new CustomEvent("openMode");
  
-  scoreparent= document.querySelector('#score');
-  closeScore= new CustomEvent("closeMode");
-  openScore= new CustomEvent("openMode");
+  scoreparent= document.querySelector('.popup');
+  closeScore= new CustomEvent("closeScore");
+  openScore= new CustomEvent("openScore");
 
 
   init() {
+    console.log(this.scoreparent)
     let element = this
     //#region obtencion de Buttons
     let btnEq = this.shadowRoot.querySelector("#btn_eq");
