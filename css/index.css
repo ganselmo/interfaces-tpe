@@ -32,13 +32,6 @@ html {
     overflow: hidden;
 }
 
-#comand_player_desk {
-    display: none;
-}
-
-#volumen_desk{
-    display: none;
-}
 
 main#routerLink {
     height: 88vh;

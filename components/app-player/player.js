@@ -12,6 +12,14 @@ export class PlayerComponent extends Component {
     closeEvent = new CustomEvent("closeComand");
     openEvent = new CustomEvent("openComand");
 
+    equ =  document.querySelector('#equalizer');
+    openEqu = new CustomEvent("openEq");
+    closeEqu = new CustomEvent("closeEq");
+
+    mode = document.querySelector("#mode");
+    openMode = new CustomEvent("openMode");
+    closeMode = new CustomEvent("closeMode");
+
     init() {
         //#region captura de buttons
         let element = this;
@@ -47,6 +55,23 @@ export class PlayerComponent extends Component {
         }); 
 
 
+        btnLike.addEventListener('click', function(){
+            this.classList.toggle("button_oculto");
+            btnLiked.classList.toggle("button_oculto");
+        });
+        btnLiked.addEventListener('click', function(){
+            this.classList.toggle("button_oculto");
+            btnLike.classList.toggle("button_oculto");
+        });
+        btnScore.addEventListener('click', function(){
+            this.classList.toggle("button_oculto");
+            btnScored.classList.toggle("button_oculto");
+        });
+        btnScored.addEventListener('click', function(){
+            this.classList.toggle("button_oculto");
+            btnScore.classList.toggle("button_oculto");
+        }); 
+
         btnPlay.addEventListener('click',function() {
             spiner.classList.toggle("button_oculto");
             setTimeout(function(){
@@ -65,7 +90,66 @@ export class PlayerComponent extends Component {
         });
 
         btnOption.addEventListener('click',function(){
-            element.parent.dispatchEvent(element.openEvent);
+            console.log(element.parent.style.display)
+            if(element.parent.style.display == 'none')
+            {
+                element.parent.dispatchEvent(element.openEvent);
+            }
+            else{
+                element.parent.dispatchEvent(element.closeEvent);
+            }
+            
+        });
+        let btnEq = this.shadowRoot.querySelector("#btn_eq");
+        let btnEqSel = this.shadowRoot.querySelector("#btn_eqsel");
+        let btnMod = this.shadowRoot.querySelector("#btn_mod");
+        let btnModSel = this.shadowRoot.querySelector("#btn_modsel");
+        let btnRandom = this.shadowRoot.querySelector("#btn_random");
+        let btnRandomSel = this.shadowRoot.querySelector("#btn_randomsel");
+        let btnRepeat = this.shadowRoot.querySelector("#btn_repeat");
+        let btnRepeatSel = this.shadowRoot.querySelector("#btn_repeatsel");
+
+        btnEq.addEventListener('click', function(){
+            this.classList.toggle("button_oculto");
+            btnEqSel.classList.toggle("button_oculto");
+            element.equ.dispatchEvent(element.openEqu);
+        });
+        btnEqSel.addEventListener('click', function(){
+            this.classList.toggle("button_oculto");
+            btnEq.classList.toggle("button_oculto");
+            element.equ.dispatchEvent(element.closeEqu);
+        });
+
+        btnMod.addEventListener('click', function(){
+            this.classList.toggle("button_oculto");
+            btnModSel.classList.toggle("button_oculto");
+            element.mode.dispatchEvent(element.openMode);
+        });
+
+        btnModSel.addEventListener('click', function(){
+            this.classList.toggle("button_oculto");
+            btnMod.classList.toggle("button_oculto");
+            element.mode.dispatchEvent(element.closeMode);
+        });
+
+        btnRandom.addEventListener('click', function(){
+            this.classList.toggle("button_oculto");
+            btnRandomSel.classList.toggle("button_oculto");
+        });
+
+        btnRandomSel.addEventListener('click', function(){
+            this.classList.toggle("button_oculto");
+            btnRandom.classList.toggle("button_oculto");
+        });
+
+
+        btnRepeat.addEventListener('click', function(){
+            this.classList.toggle("button_oculto");
+            btnRepeatSel.classList.toggle("button_oculto");
+        });
+        btnRepeatSel.addEventListener('click', function(){
+            this.classList.toggle("button_oculto");
+            btnRepeat.classList.toggle("button_oculto");
         });
         //#endregion 
 

@@ -9,7 +9,7 @@ let popupAction = document.querySelector("#myPopup");
 document.addEventListener("DOMContentLoaded", function () {
 
     comandPlay.addEventListener('openComand',openComand);
-    comandPlay.addEventListener('closeComend',closeComand);
+    comandPlay.addEventListener('closeComand',closeComand);
 
     popup.addEventListener('openScore',openScore);
     popup.addEventListener('closeScore',closeScore);

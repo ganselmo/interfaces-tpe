@@ -1,22 +1,26 @@
-.player{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 62px;
-    width: 100%;
-    background-color: var(--base-color);
-    justify-content: space-around;
-    overflow: hidden;
+.player {
+  display: grid;
+  grid-template-columns: 20vw 10vw 40vw 30vw;
+  align-items: center;
+  justify-items: center ;
+  height: 62px;
+  width: 100vw;
+  background-color: var(--base-color);
+  justify-content: center;
+  overflow: hidden;
 }
 
-.progress{
+.icon_actual {
+  display: none;
+}
+
+.progress {
   height: 7px;
   width: 100%;
   align-items: center;
   bottom: 62px;
   background-color: var(--base-color);
 }
-
 
 #myProgress {
   position: relative;
@@ -34,84 +38,80 @@
   border-radius: 15px;
 }
 
-
 /*******************PayerConsole*******************/
 
+.player_buttons {
+  display: flex;
+  flex-direction: row;
+  width: 160px;
+  justify-content: space-evenly;
+  align-items: center;
+  height: inherit;
+  background-color: var(--base-color);
+}
 
-  .player_buttons{
-    display: flex;
-    flex-direction: row;
-    width: 160px;
-    justify-content: space-evenly;
-    align-items: center;
-    height: inherit;
-    background-color: var(--base-color);
-  }
 .play_select {
   position: relative;
 }
 
-.text_desck{
+.text_desck {
   display: none;
 }
 
-  .text_info{
-    display: flex;
-    flex-direction: column;
-    align-items: normal;
-    width: 90px;
-    justify-content: space-around;
-    left: 5px;
-    color: var(--primary-color);
-    height: inherit;
-    overflow: hidden;
-  }
-  
-  .logo_placa{
-    height: 50px;
-    width: 50px;
-    background-color:  var(--primary-color);
-  }
-  
-  .button_oculto{
-      display: none;
-  }
-    
-    
-  /****************NEXT PREVIUS********************/
-  
- 
-  .btn_next {
-    display: inline-block;
-    align-items: initial;
-    height: 22px;
-    width: 22px;
-    cursor: pointer;
-  }
+.text_info {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: space-around;
+  color: var(--primary-color);
+  height: inherit;
+  overflow: hidden;
+}
 
+.logo_placa {
+  height: 50px;
+  width: 50px;
+  background-color: var(--primary-color);
+}
+
+.button_oculto {
+  display: none;
+}
+
+/****************NEXT PREVIUS********************/
+
+.btn_next {
+  display: inline-block;
+  align-items: initial;
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+}
 
 .comandos {
-    left: 10px;
-    display: flex;
-    flex-direction: row;
-    height: auto;
-    width: 85px;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: auto;
+  width: 80%;
+  margin: 0 10%;
+  justify-content: space-between;
+  
 }
 
 .options {
-    width: 22px;
-    height: 22px;
+  width: 22px;
+  height: 22px;
 }
 
-.social{
+.social {
   width: 30px;
   height: auto;
 }
 
- /*******************LOADER**********************/
+/*******************LOADER**********************/
 
- .loader {
+.loader {
   border: 5px solid var(--secondary-color);
   border-radius: 50%;
   border-top: 5px solid var(--primary-color);
@@ -124,40 +124,61 @@
   position: absolute;
 }
 
-
-
 @-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
 }
-
+marquee{
+  margin: 0 10px;
+}
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.button_desktop{
+.button_desktop {
   display: none;
 }
 
-
 @media(min-width: 600px) {
+  .player {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 64px 10vw 21vw 17vw 39vw;
+    gap: 2vw;
 
-  .button_desktop{
+  }
+  .comandos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+
+    margin: 0 5VW;
+    justify-content: space-between;
+    
+  }
+  .button_desktop {
     display: inherit;
   }
-
-  #btn_options{
+  #btn_options {
     display: none;
   }
-
-  .icon_actual{
+  .icon_actual {
+    display: inline;
     width: 50px;
     height: 50px;
     background-color: lawngreen;
   }
-
-  .social{
+  .social {
     display: flex;
     flex-direction: row;
     align-content: space-around;
@@ -166,23 +187,16 @@
     align-items: baseline;
     justify-content: space-around;
   }
-
-  .text_movil{
+  .text_movil {
     display: none;
   }
-
-
-  .text_desck{
+  .text_desck {
     display: inherit;
     width: 100px;
-    white-space:nowrap
-
-
+    white-space: nowrap
   }
-
   #myProgress {
     width: 50%;
     left: 25%;
   }
-
 }
