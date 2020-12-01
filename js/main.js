@@ -20,6 +20,7 @@ import { AccordComponent } from '../components/app-acord/acord.js';
 import { LandingPage } from '../pages/landing/landing.js';
 import { ProfilePage } from '../pages/profile/profile.js';
 import { HelpPage } from '../pages/help/help.js';
+import { VolumenComponent } from '../Components/app-volumen-mov/volumen-mov.js';
 
 
 
@@ -40,6 +41,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     window.customElements.define('app-mode', ModeComponent);
     window.customElements.define('content-wrapper', ContentWrapperComponent);
     window.customElements.define('app-accord', AccordComponent);
+    window.customElements.define('app-volumen', VolumenComponent);
+
 
     //PAGES
     window.customElements.define('landing-page', LandingPage);

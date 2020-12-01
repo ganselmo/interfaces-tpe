@@ -15,6 +15,9 @@ export class OptionsComponent extends Component {
   closeMode= new CustomEvent("closeMode");
   openMode= new CustomEvent("openMode");
  
+  scoreparent= document.querySelector('#score');
+  closeScore= new CustomEvent("closeMode");
+  openScore= new CustomEvent("openMode");
 
 
   init() {
@@ -80,14 +83,17 @@ export class OptionsComponent extends Component {
       btnRepeat.classList.toggle("oculto");
 
     });
-    // respectivo a score
+    // respectivo a score POP-UP
     btnScore.addEventListener('click', function(){
       this.classList.toggle("oculto");
       btnScored.classList.toggle("oculto");
+      element.scoreparent.dispatchEvent(element.openScore);
      });
     btnScored.addEventListener('click', function(){
       this.classList.toggle("oculto");
       btnScore.classList.toggle("oculto");
+      element.scoreparent.dispatchEvent(element.closeScore);
+
     });
 
   //#endregion

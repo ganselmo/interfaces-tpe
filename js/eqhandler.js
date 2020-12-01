@@ -2,13 +2,21 @@ let eq = document.querySelector("#equalizer");
 let comandPlay = document.querySelector("#comand_player");
 let modeSelect = document.querySelector("#mode");
 let setPlayer = document.querySelector("#player");
+let popup = document.querySelector("#myPopup");
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
     comandPlay.addEventListener('openComand',openComand);
     comandPlay.addEventListener('closeComend',closeComand);
+    comandPlay.addEventListener('openScore',openScore);
+    comandPlay.addEventListener('closeScore',closeScore);
+
     eq.addEventListener('openEq',openEq);
     eq.addEventListener('closeEq',closeEq);
+
+
+
     modeSelect.addEventListener('openMode',openMode);
     modeSelect.addEventListener('closeMode',closeMode);
     setPlayer.addEventListener('openPlay',openPlay);
@@ -55,7 +63,16 @@ export function closeMode() {
 export function openPlay() {
     setPlayer.style.display = 'initial'
 }
-
 export function closePlay() {
     setPlayer.style.display = 'none'
 }
+
+function openScore(){
+    popup.classList.toggle("show");
+}
+
+
+function closeScore(){
+    popup.classList.toggle("show");
+}
+
