@@ -18,21 +18,21 @@
         {"name":"Notificaciones","link":"notif"},
         {"name":"Ayuda","link":"help-page"},
         {"name":"Salir","link":"exit"}]'></context-menu>
-        <app-filters id = "filters-panel" filters='[
-        {"name":"Playlist","value":"pl"},
-        {"name":"Canciones","value":"song"},
-        {"name":"Podcasts","value":"pcst"},
+        <app-filters id="filters-panel" filters='[
+        {"name":"Canciones","value":"toSongs"},
+        {"name":"Playlist","value":"toPlaylists"},
+        {"name":"Podcasts","value":"toPodcasts"},
         {"name":"Albumes","link":"albums"},
         {"name":"Artistas","link":"artists"}]'></app-filters>
     </header>
     <main id="routerLink">
-        
+
     </main>
     <footer>
         <app-equ id="equalizer"></app-equ>
-        <app-mode id="mode"></app-mode> 
+        <app-mode id="mode"></app-mode>
         <app-options-mov id="comand_player"></app-options-mov>
-        <app-slider-state></app-slider-state> 
+        <app-slider-state></app-slider-state>
         <app-player id="player"></app-player>
     </footer>
 

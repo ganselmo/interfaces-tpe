@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
 
     closeBuscador()
-    document.querySelector('main').addEventListener('click',closeBuscador)
+    // document.querySelector('main').addEventListener('click',closeBuscador)
 })
 
 

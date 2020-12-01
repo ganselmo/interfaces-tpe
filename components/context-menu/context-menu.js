@@ -1,7 +1,7 @@
 import { Component } from "../../framework/components/component.js";
 import { navigateRouter } from "../../js/router.handler.js";
 
-export class MenuComponent extends Component {
+export class ContextMenuComponent extends Component {
 
     constructor() {
         super(import.meta.url)

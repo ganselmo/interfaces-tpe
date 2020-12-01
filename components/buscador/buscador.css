@@ -9,6 +9,8 @@
 .buscador input.input.block{
     height: 31px;
     border-radius: 50px;
+    background-color: var(--tertiary-color);
+    font-weight: 600;
 }
 
 .lupa{

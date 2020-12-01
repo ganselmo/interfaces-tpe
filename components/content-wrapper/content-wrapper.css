@@ -96,6 +96,7 @@
         opacity: 1;
         transition: opacity 0.5s;
     }
+   
 }
 
 @media (min-width:1200px) {
@@ -128,5 +129,4 @@
         height: 55%;
         margin: 0px 0px 0px 10%;
     }
-    
 }
