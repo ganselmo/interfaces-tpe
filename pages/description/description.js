@@ -14,7 +14,7 @@ export class DescriptionPage extends Component {
     init() {
 
         const section = this.shadowRoot.querySelector('section')
-        this.contenido.forEach(
+        this.comentarios.forEach(
             element => {
                 let contentWrapper = document.createElement('content-wrapper')
                 contentWrapper.setAttribute('canciones', JSON.stringify(element))

@@ -1,18 +1,18 @@
 .comment-container {
     position: relative;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* Coment */
     width: 355px;
-    height: auto;
     left: 10px;
-    /* GreyDisabled */
     background: var(--disabled-color);
     border-radius: 20px;
     padding-bottom: 5px;
     margin-top: 1px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
 
 .comment-container>section {
@@ -84,7 +84,31 @@
     visibility: hidden;
 }
 
-@media (min-width: 600px) {
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+    .comment-container {
+        left: 20px;
+        width: 90%;
+    }
+
+    .comment-header {
+        width: 90%;
+    }
+
+    .comment-header .comment-date > div,  .comment-header .comment-autor > div{
+        font-size: var(--normal-font);
+    }
+
+    .comment-body {
+        width: 90%;
+        height: auto;
+    }
+
+    .comment-footer {
+        width: 90%;
+    }
+}
+
+@media (min-width: 1000px) {
     .comment-container {
         left: 200px;
         width: 60%;

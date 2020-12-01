@@ -37,7 +37,6 @@ export class CommentInsertComponent extends Component {
 
         //#region See more/less icons
         let seeIcons = this.shadowRoot.querySelectorAll(".comment-expand img");
-        console.log(seeIcons);
 
         for (let i = 0; i < seeIcons.length; i++) {
             const seeIcon = seeIcons[i];

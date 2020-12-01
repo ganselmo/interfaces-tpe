@@ -17,6 +17,7 @@ import { ContentWrapperComponent } from '../components/content-wrapper/content-w
 import { AccordComponent } from '../components/app-acord/acord.js';
 import { CommentInsertComponent } from '../components/app-comment-insert/comment-insert.js';
 import { CommentReplyComponent } from '../components/app-comment-reply/comment-reply.js';
+import { SongComponent } from '../components/app-song/song.js';
 
 //Pages
 import { LandingPage } from '../pages/landing/landing.js';
@@ -46,6 +47,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     window.customElements.define('app-accord', AccordComponent);
     window.customElements.define('app-comment-insert', CommentInsertComponent);
     window.customElements.define('app-comment-reply', CommentReplyComponent);
+    window.customElements.define('app-song', SongComponent);
 
     //PAGES
     window.customElements.define('landing-page', LandingPage);
