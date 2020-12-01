@@ -69,10 +69,12 @@ export class CommentComponent extends Component {
         }
 
         function appendInput() {
-            console.log(this);
+            console.log(window);
             this.classList.add("oculto");
             let insertComment = document.createElement("app-comment-insert");
-            insertComment.style.transform = "scale(0.8)";
+            if(window.innerWidth < 600) {
+                insertComment.style.transform = "scale(0.8)";
+            }
             this.parentElement.parentElement.parentElement.appendChild(insertComment);
             console.log(insertComment);
         }
