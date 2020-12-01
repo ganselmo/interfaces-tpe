@@ -124,12 +124,12 @@
         /* 3d effect */
         background-position: top center;
         transform-style: preserve-3d;
-        transform: scale(1.4) translateZ(10px);
+        transform: scale(1.2) translateZ(10px);
     }
     .song-description-container {
         width: 500px;
     }
-    .song-display-container:after, .song-description-container:after {
+    .song-container:after, .song-display-container:after, .song-description-container:after {
         /* 3d effect */
         content: '';
         position: absolute;
@@ -138,7 +138,7 @@
         border-radius: 50%;
         left: 0;
         bottom: 0px;
-        box-shadow: 0 30px 20px rgba(0, 0, 0, .3);
+        box-shadow: 0 30px 20px rgba(0, 0, 0, .6);
     }
     .song-display-content {
         /* 3d effect */

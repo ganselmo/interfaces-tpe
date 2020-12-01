@@ -8,28 +8,6 @@ export class SongComponent extends Component {
     }
 
     init() {
-        //#region Score Stars
-        let scoreStars = this.shadowRoot.querySelectorAll(".score");
-
-        for (let i = 0; i < scoreStars.length; i++) {
-            const scoreStar = scoreStars[i];
-            scoreStar.addEventListener("click", score);
-            scoreStar.setAttribute("target", i);
-        }
-
-        function score() {
-            for (let i = 0; i < scoreStars.length; i++) {
-                const e = scoreStars[i];
-                if (e.classList.contains("scored")) {
-                    e.classList.remove("scored");
-                }
-                if (i <= this.attributes.target.value) {
-                    e.classList.add("scored");
-                }
-            }
-        }
-        //#endregion
-
         //#region 3d effect
         let display = this.shadowRoot.querySelector(".song-container");
 

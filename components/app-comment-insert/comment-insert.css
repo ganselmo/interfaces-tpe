@@ -37,6 +37,10 @@
     align-items: center;
 }
 
+.score:hover {
+    cursor: pointer;
+}
+
 .scored {
     background-image: url("./assets/icons/star-sm-icon-filled.svg");
 }
@@ -70,6 +74,10 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.comment-summit:hover {
+    cursor: pointer;
 }
 
 .comment-footer {
