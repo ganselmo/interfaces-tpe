@@ -4,6 +4,7 @@ let modeSelect = document.querySelector("#mode");
 let setPlayer = document.querySelector("#player");
 let popup = document.querySelector(".popup");
 let popupAction = document.querySelector("#myPopup");
+let volumen = document.querySelector("#volumen");
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -17,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     eq.addEventListener('openEq',openEq);
     eq.addEventListener('closeEq',closeEq);
 
-
+    volumen.addEventListener('showVolumen',showVolumen);
 
     modeSelect.addEventListener('openMode',openMode);
     modeSelect.addEventListener('closeMode',closeMode);
@@ -78,3 +79,6 @@ export function closeScore(){
     popupAction.classList.toggle("show");
 }
 
+export function showVolumen(){
+    volumen.classList.toggle("oculto");
+}

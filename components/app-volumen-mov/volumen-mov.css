@@ -40,6 +40,8 @@ div{
     background: var(--secondary-color);
     cursor: pointer;
   }
+
+ 
  
   @media(min-width: 600px){
       div{

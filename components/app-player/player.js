@@ -12,6 +12,9 @@ export class PlayerComponent extends Component {
     closeEvent = new CustomEvent("closeComand");
     openEvent = new CustomEvent("openComand");
 
+    parentVolumen =  document.querySelector('#volumen');
+    showVolumen = new CustomEvent("showVolumen");
+
     init() {
         //#region captura de buttons
         let element = this;
@@ -23,6 +26,8 @@ export class PlayerComponent extends Component {
         let btnPlay = this.shadowRoot.querySelector("#btn_play");
         let btnPause = this.shadowRoot.querySelector("#btn_pause");
         let btnOption = this.shadowRoot.querySelector("#btn_options");
+        let btnVolumen = this.shadowRoot.querySelector("#btn_volumen");
+
         let spiner = this.shadowRoot.querySelector("#spiner");
         spiner.classList.toggle("button_oculto");
         let elem = this.shadowRoot.querySelector("#myBar"); 
@@ -67,6 +72,10 @@ export class PlayerComponent extends Component {
         btnOption.addEventListener('click',function(){
             element.parent.dispatchEvent(element.openEvent);
         });
+
+        btnVolumen.addEventListener('click', function(){
+            element.parentVolumen.dispatchEvent(element.showVolumen);
+        })
         //#endregion 
 
 

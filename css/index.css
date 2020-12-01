@@ -44,6 +44,10 @@ main#routerLink {
     height: 88vh;
 }
 
+.oculto{
+    display: none;
+}
+
 /*******POP-UP************/
 /* Popup container - can be anything you want */
 .popup {
