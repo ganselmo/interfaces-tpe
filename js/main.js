@@ -13,7 +13,6 @@ import { HeaderComponent } from '../components/spoiler-header/header.js'
 import { ModeComponent } from '../components/app-mode/mode.js';
 import { OptionsComponent } from '../components/app-options-mov/options-mov.js';
 import { PlayerComponent } from '../components/app-player/player.js';
-import { SliderStateComponent } from '../components/app-slider-state/slider-state.js';
 import { ContentWrapperComponent } from '../components/content-wrapper/content-wrapper.js';
 import { AccordComponent } from '../components/app-acord/acord.js';
 import { CommentInsertComponent } from '../components/app-comment-insert/comment-insert.js';
@@ -30,6 +29,8 @@ import { LineSongComponent } from '../components/line-song/line-song.js';
 import { LinePodcastComponent } from '../components/line-podcast/line-podcast.js';
 import { LineLibraryComponent } from '../components/line-library/line-library.js';
 import { LibraryPage } from '../pages/library/library-page.js';
+import { VolumenComponent } from '../Components/app-volumen-mov/volumen-mov.js';
+
 
 
 document.addEventListener("DOMContentLoaded", async function () {
@@ -46,7 +47,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     window.customElements.define('app-filter', FilterComponent);
     window.customElements.define('app-slider', SliderComponent);
     window.customElements.define('app-player', PlayerComponent);
-    window.customElements.define('app-slider-state', SliderStateComponent);
     window.customElements.define('app-options-mov', OptionsComponent);
     window.customElements.define('app-mode', ModeComponent);
     window.customElements.define('content-wrapper', ContentWrapperComponent);
@@ -59,6 +59,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     window.customElements.define('app-comment-insert', CommentInsertComponent);
     window.customElements.define('app-comment-reply', CommentReplyComponent);
     window.customElements.define('app-song', SongComponent);
+    window.customElements.define('app-volumen', VolumenComponent);
+
 
     //PAGES
     window.customElements.define('landing-page', LandingPage);
