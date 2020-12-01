@@ -1,5 +1,6 @@
 
 import { Component } from "../../framework/components/component.js";
+import { navigateRouter } from "../../js/router.handler.js";
 
 
 export class BuscadorComponent extends Component {
@@ -17,14 +18,9 @@ export class BuscadorComponent extends Component {
         let element = this
         element.shadowRoot.querySelector('.lupa').addEventListener('click',function()
         {
-            // let input = element.shadowRoot.querySelector('input')
-            // element.find(input.value)
-            // input.value = ''
- 
             element.filters.dispatchEvent(element.closeFilterEvent);
-        
+            navigateRouter('search-page')   
         })
-
     }
     changes() {
 

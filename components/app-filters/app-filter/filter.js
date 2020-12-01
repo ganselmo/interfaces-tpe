@@ -15,17 +15,29 @@ export class FilterComponent extends Component {
     init() {
       
         this.shadowRoot.querySelector('button').innerHTML =this.attributes.name.value
-        let element = this
-        element.shadowRoot.querySelector('button').addEventListener('click',function()
-        {
 
-            element.filters.dispatchEvent(element.closeFiltersEvent);
-        
-        })
+        if(this.attributes.isClicked.value=='true')
+        {
+            this.shadowRoot.querySelector('button').classList.remove('secondary') 
+            this.shadowRoot.querySelector('button').classList.add('tertiary') 
+        }
+        else{
+            this.shadowRoot.querySelector('button').classList.remove('tertiary') 
+            this.shadowRoot.querySelector('button').classList.add('secondary') 
+        }
     }
 
     changes() {
-      
+        console.log(this.attributes.isClicked.value)
+        if(this.attributes.isClicked.value=='true')
+        {
+            this.shadowRoot.querySelector('button').classList.remove('secondary') 
+            this.shadowRoot.querySelector('button').classList.add('tertiary') 
+        }
+        else{
+            this.shadowRoot.querySelector('button').classList.remove('tertiary') 
+            this.shadowRoot.querySelector('button').classList.add('secondary') 
+        }
     }
 
 

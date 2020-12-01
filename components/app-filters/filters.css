@@ -1,14 +1,23 @@
-.parent{
-    height: 64px ;
+.parent {
+    height: 64px;
     width: 100%;
     overflow-x: auto;
 }
 
-.main{
-    background-color: var(--tertiary-color);
-    height: 64px ;
+.main {
+    background-color: var(--base-color);
+    height: 64px;
     width: fit-content;
     display: flex;
     align-items: center;
+}
 
+@media (min-width: 600px) {
+    .main {
+        justify-content: space-evenly;
+        width: 100vw;
+    }
+    .parent {
+       margin: 30px 0 ;
+    }
 }

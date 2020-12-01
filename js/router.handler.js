@@ -34,8 +34,4 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 
 
-const routes = [
-    { name: "landing-page", element: "landing-page" }
-]
-
 

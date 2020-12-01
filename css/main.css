@@ -194,6 +194,10 @@ h4 {
     font-size: var(--big-font);
 }
 
+.td {
+    font-size: var( --h4-font);
+}
+
 .input {
     text-align: center;
     border-radius: 10px;

@@ -1,0 +1,12 @@
+.transparent {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    color: var(--primary-color);
+}
+article.data{
+    margin: 0 0 150px 0;
+}
