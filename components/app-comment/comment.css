@@ -89,7 +89,6 @@ app-comment-reply {
     opacity: 0;
 }
 
-
 @media only screen and (min-width: 600px) and (max-width: 1000px) {
     .comment-container {
         left: 20px;

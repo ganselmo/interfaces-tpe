@@ -12,7 +12,7 @@
     margin-top: 1px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 2s ease;
 }
 
 .comment-container>section {

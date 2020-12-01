@@ -59,8 +59,11 @@ export class CommentComponent extends Component {
             replyPanel.childNodes.forEach(element => {
                 let e = element.shadowRoot.firstElementChild;
                 if (e.style.maxHeight) {
-                    e.style.display = "none";
-                    e.style.maxHeight = null;
+                    e.style.maxHeight = 0;
+                    setTimeout(function () {
+                        e.style.display = "none";
+                        e.style.maxHeight = null;
+                    }, 2000)
                 } else {
                     e.style.display = "flex";
                     e.style.maxHeight = e.scrollHeight + "vh";
@@ -68,6 +71,7 @@ export class CommentComponent extends Component {
             });
         }
 
+        
         function appendInput() {
             console.log(window);
             this.classList.add("oculto");
@@ -102,7 +106,7 @@ export class CommentComponent extends Component {
         //#endregion
 
         //#region Append random replies
-        let rdm = Math.trunc((Math.random() * 10));
+        let rdm = Math.trunc((Math.random() * 10 + 1));
 
         let replyContainer = this.shadowRoot.querySelector(".comment-reply-container");
         let reply;
