@@ -8,45 +8,25 @@ export class CommentComponent extends Component {
     }
 
     init() {
-        //#region Score Stars
-        let scoreStars = this.shadowRoot.querySelectorAll(".score");
-
-        for (let i = 0; i < scoreStars.length; i++) {
-            const scoreStar = scoreStars[i];
-            scoreStar.addEventListener("click", score);
-            scoreStar.setAttribute("target", i);
-        }
-
-        function score() {
-            for (let i = 0; i < scoreStars.length; i++) {
-                const e = scoreStars[i];
-                if (e.classList.contains("scored")) {
-                    e.classList.remove("scored");
-                }
-                if (i <= this.attributes.target.value) {
-                    e.classList.add("scored");
-                }
-            }
-        }
-
+        //#region reply
         let comments = document.querySelectorAll("app-comment");
         let lastReply;
         let commentFooterOptions;
-        
+
         for (let i = 0; i < comments.length; i++) {
             if (comments[i].shadowRoot.lastChild != null) {
                 lastReply = comments[i].shadowRoot.lastChild;
             }
         }
-        
+
         commentFooterOptions = lastReply.previousElementSibling.lastElementChild.firstElementChild;
 
         commentFooterOptions.childNodes.forEach(e => {
-            if(e.firstChild != null) {
-                if(e.classList.contains("comment-expand")) {
+            if (e.firstChild != null) {
+                if (e.classList.contains("comment-expand")) {
                     e.addEventListener("click", appendSeeOption);
                 }
-                if(e.classList.contains("comment-reply")) {
+                if (e.classList.contains("comment-reply")) {
                     e.addEventListener("click", appendInput);
                 }
             }
@@ -71,16 +51,27 @@ export class CommentComponent extends Component {
             });
         }
 
-        
+
         function appendInput() {
             console.log(window);
             this.classList.add("oculto");
             let insertComment = document.createElement("app-comment-insert");
-            if(window.innerWidth < 600) {
+            if (window.innerWidth < 600) {
                 insertComment.style.transform = "scale(0.8)";
             }
             this.parentElement.parentElement.parentElement.appendChild(insertComment);
             console.log(insertComment);
+        }
+        //#endregion
+
+        //#region Append random replies
+        let rdm = Math.trunc((Math.random() * 10 + 1));
+
+        let replyContainer = this.shadowRoot.querySelector(".comment-reply-container");
+        let reply;
+        for (let i = 0; i < rdm; i++) {
+            reply = document.createElement("app-comment-reply");
+            replyContainer.appendChild(reply);
         }
         //#endregion
 
@@ -102,17 +93,6 @@ export class CommentComponent extends Component {
                     e.classList.add("oculto");
                 }
             }
-        }
-        //#endregion
-
-        //#region Append random replies
-        let rdm = Math.trunc((Math.random() * 10 + 1));
-
-        let replyContainer = this.shadowRoot.querySelector(".comment-reply-container");
-        let reply;
-        for (let i = 0; i < rdm; i++) {
-            reply = document.createElement("app-comment-reply");
-            replyContainer.appendChild(reply);
         }
         //#endregion
 

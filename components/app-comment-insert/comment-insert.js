@@ -12,7 +12,32 @@ export class CommentInsertComponent extends Component {
         let header = this.shadowRoot.querySelector(".comment-header");
         header.classList.add("oculto");
         //#endregion
+
+        //#region Seccion Escribir Comentario de Cancion
+        if (this.classList.contains("destacado")) {
+            let container = this.shadowRoot.firstChild;
+            container.classList.add("destacado");
+            container.firstElementChild.classList.remove("oculto");
+            let score = container.firstElementChild.firstElementChild.firstElementChild;
+            let children = score.children;
+            score.classList.add("bigger");
+            for (const star of children) {
+                star.classList.add("gira");
+            }
+            let autor = container.firstElementChild.lastElementChild;
+            autor.classList.add("oculto");
+            autor.previousElementSibling.classList.add("oculto");
+        }
+        //#endregion
+
+        let summit = this.shadowRoot.querySelector(".comment-summit");
+        summit.addEventListener("click", ocultar);
         
+        function ocultar() {
+            let container = this.parentElement.parentElement;
+            console.log(this.parentElement);
+            container.classList.add("oculto");
+        }
         //#region Score Stars
         let scoreStars = this.shadowRoot.querySelectorAll(".score");
 
@@ -24,13 +49,14 @@ export class CommentInsertComponent extends Component {
 
         function score() {
             for (let i = 0; i < scoreStars.length; i++) {
-                const e = scoreStars[i];
-                if(e.classList.contains("scored")) {
-                    e.classList.remove("scored");
+                const elem = scoreStars[i];
+                if (elem.classList.contains("scored")) {
+                    elem.classList.remove("scored");
                 }
-                if(i <= this.attributes.target.value) {
-                    e.classList.add("scored");
+                if (i <= this.attributes.target.value) {
+                    elem.classList.add("scored");
                 }
+                elem.classList.remove("gira");
             }
         }
         //#endregion
@@ -47,7 +73,7 @@ export class CommentInsertComponent extends Component {
         function mostrar() {
             for (let i = 0; i < seeIcons.length; i++) {
                 const e = seeIcons[i];
-                if(e.classList.contains("oculto")) {
+                if (e.classList.contains("oculto")) {
                     e.classList.remove("oculto");
                 } else {
                     e.classList.add("oculto");
@@ -58,7 +84,7 @@ export class CommentInsertComponent extends Component {
     }
 
     changes() {
-        
+
     }
 
 }

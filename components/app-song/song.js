@@ -8,31 +8,19 @@ export class SongComponent extends Component {
     }
 
     init() {
-       //#region Score Stars
-       let scoreStars = this.shadowRoot.querySelectorAll(".score");
+        //#region 3d effect
+        let display = this.shadowRoot.querySelector(".song-container");
 
-       for (let i = 0; i < scoreStars.length; i++) {
-           const scoreStar = scoreStars[i];
-           scoreStar.addEventListener("click", score);
-           scoreStar.setAttribute("target", i);
-       }
+        display.addEventListener('mousemove', function (e) {
 
-       function score() {
-           for (let i = 0; i < scoreStars.length; i++) {
-               const e = scoreStars[i];
-               if(e.classList.contains("scored")) {
-                   e.classList.remove("scored");
-               }
-               if(i <= this.attributes.target.value) {
-                   e.classList.add("scored");
-               }
-           }
-       }
-       //#endregion
+            let xAxis = (window.innerWidth / 2 - e.pageX) / -30;
+            let yAxis = (window.innerHeight / 2.5 - e.pageY) / 30;
+            display.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        });
     }
 
     changes() {
-        
+
     }
 
 }
