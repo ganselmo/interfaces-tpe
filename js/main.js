@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     window.customElements.define('app-plan', PlanComponent);
     window.customElements.define('context-menu', ContextMenuComponent);
     window.customElements.define('app-comment', CommentComponent);
-    window.customElements.define('context-menu', MenuComponent);
     window.customElements.define('app-buscador', BuscadorComponent);
     window.customElements.define('app-filters', FiltersComponent);
     window.customElements.define('app-filter', FilterComponent);
