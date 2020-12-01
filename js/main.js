@@ -1,6 +1,5 @@
 "use strict"
-
-//Components
+import { CommentComponent } from '../components/app-comment/comment.js';
 import { EquComponent } from '../components/app-equ/equ.js';
 import { FilterComponent } from '../components/app-filters/app-filter/filter.js';
 import { FiltersComponent } from '../components/app-filters/filters.js';
@@ -17,6 +16,9 @@ import { PlayerComponent } from '../components/app-player/player.js';
 import { SliderStateComponent } from '../components/app-slider-state/slider-state.js';
 import { ContentWrapperComponent } from '../components/content-wrapper/content-wrapper.js';
 import { AccordComponent } from '../components/app-acord/acord.js';
+import { CommentInsertComponent } from '../components/app-comment-insert/comment-insert.js';
+import { CommentReplyComponent } from '../components/app-comment-reply/comment-reply.js';
+import { SongComponent } from '../components/app-song/song.js';
 
 //Pages
 import { LandingPage } from '../pages/landing/landing.js';
@@ -38,6 +40,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     window.customElements.define('app-equ', EquComponent);
     window.customElements.define('app-plan', PlanComponent);
     window.customElements.define('context-menu', ContextMenuComponent);
+    window.customElements.define('app-comment', CommentComponent);
+    window.customElements.define('context-menu', MenuComponent);
     window.customElements.define('app-buscador', BuscadorComponent);
     window.customElements.define('app-filters', FiltersComponent);
     window.customElements.define('app-filter', FilterComponent);
@@ -53,6 +57,9 @@ document.addEventListener("DOMContentLoaded", async function () {
     window.customElements.define('podcast-line', LinePodcastComponent);
     window.customElements.define('library-line',LineLibraryComponent)
     window.customElements.define('music-menu', MusicMenuComponent);
+    window.customElements.define('app-comment-insert', CommentInsertComponent);
+    window.customElements.define('app-comment-reply', CommentReplyComponent);
+    window.customElements.define('app-song', SongComponent);
 
     //PAGES
     window.customElements.define('landing-page', LandingPage);

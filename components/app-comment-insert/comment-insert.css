@@ -1,0 +1,151 @@
+.comment-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Coment */
+    width: 355px;
+    height: auto;
+    left: 10px;
+    /* GreyDisabled */
+    background: var(--disabled-color);
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 1px;
+}
+
+.comment-container>section {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.comment-header {
+    width: 335px;
+    height: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.comment-score {
+    width: 120px;
+    height: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.scored {
+    background-image: url("./assets/icons/star-sm-icon-filled.svg");
+}
+
+.comment-date {
+    width: 45px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-autor {
+    width: 100px;
+    height: 20px;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.comment-body {
+    width: 335px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-insert {
+    width: 335px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.comment-footer {
+    width: 335px;
+    height: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.oculto {
+    display: none;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+    .comment-container {
+        left: 20px;
+        width: 90%;
+    }
+
+    .comment-header {
+        width: 90%;
+    }
+
+    .comment-header .comment-date > div,  .comment-header .comment-autor > div{
+        font-size: var(--normal-font);
+    }
+
+    .comment-body {
+        width: 90%;
+        height: auto;
+    }
+
+    .comment-insert {
+        width: 90%;
+        height: auto;
+    }
+
+    .input.lg {
+        width: 500px;
+    }
+
+    .comment-footer {
+        width: 90%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .comment-container {
+        left: 200px;
+        width: 60%;
+    }
+
+    .comment-header {
+        width: 90%;
+    }
+
+    .comment-header .comment-date > div,  .comment-header .comment-autor > div{
+        font-size: var(--normal-font);
+    }
+
+    .comment-body {
+        width: 90%;
+        height: auto;
+    }
+
+    .comment-insert {
+        width: 90%;
+        height: auto;
+    }
+
+    .input.lg {
+        width: 500px;
+    }
+
+    .comment-footer {
+        width: 90%;
+    }
+}
