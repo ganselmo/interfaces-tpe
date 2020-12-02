@@ -59,8 +59,9 @@ main#routerLink {
   width: 355px;
   height: 106px;
   position: fixed;
-  background-color: red;
+  background-color: transparent;
   animation: fadeIn 3s forwards;
+  overflow: hidden;
 }
 
 #comand_player_desk{

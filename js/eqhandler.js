@@ -79,6 +79,7 @@ export function openScore() {
 
 export function closeScore() {
     popupAction.classList.remove("show");
+    popupAction.classList.add("oculto");
 }
 
 
