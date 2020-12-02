@@ -7,13 +7,19 @@
     /* Coment */
     width: 355px;
     height: auto;
-    left: 10px;
+
     /* GreyDisabled */
     background: var(--disabled-color);
     border-radius: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-top: 1px;
+}
+
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .comment-container>section {
@@ -97,7 +103,7 @@
 }
 
 .destacado {
-    margin-bottom: 50px;
+
 }
 
 .bigger {
@@ -136,7 +142,7 @@
 
 @media only screen and (min-width: 600px) and (max-width: 1000px) {
     .comment-container {
-        left: 20px;
+
         width: 90%;
     }
     .comment-header {
@@ -163,10 +169,10 @@
 
 @media (min-width: 1000px) {
     .comment-container {
-        left: 200px;
-        width: 60%;
+
+        width: 100%;
     }
-    .comment-header {
+    .comment-header {`
         width: 90%;
     }
     .comment-header .comment-date>div, .comment-header .comment-autor>div {

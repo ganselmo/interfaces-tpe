@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 20vw 10vw 40vw 30vw;
   align-items: center;
-  justify-items: center ;
+  justify-items: center;
   height: 62px;
   width: 100vw;
   background-color: var(--base-color);
@@ -89,6 +89,7 @@
 }
 
 .comandos {
+
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -96,7 +97,17 @@
   width: 80%;
   margin: 0 10%;
   justify-content: space-between;
-  
+}
+
+.comandos_desk {
+  display: none;
+
+  flex-direction: row;
+  align-items: center;
+  height: auto;
+  width: 80%;
+  margin: 0 10%;
+  justify-content: space-between;
 }
 
 .options {
@@ -132,9 +143,11 @@
     -webkit-transform: rotate(360deg);
   }
 }
-marquee{
+
+marquee {
   margin: 0 10px;
 }
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -148,23 +161,67 @@ marquee{
   display: none;
 }
 
+/* #btn_random {
+  display: none;
+}
+
+#btn_randomsel {
+  display: none;
+}
+
+#btn_repeat {
+  display: none;
+}
+
+#btn_repeatsel {
+  display: none;
+}
+
+#volumen_desk {
+  display: none;
+}
+
+#btn_eq {
+  display: none;
+}
+
+#btn_eqsel {
+  display: none;
+}
+
+#btn_mod {
+  display: none;
+}
+
+#btn_modsel {
+  display: none;
+} */
+
 @media(min-width: 600px) {
+
+  .comandos{
+    display: none !important;
+  }
+  
+  .comandos_desk {
+    display: flex;
+  }
   .player {
     display: grid;
     width: 100%;
     grid-template-columns: 64px 10vw 21vw 17vw 39vw;
     gap: 2vw;
-
+  }
+  #volumen_desk {
+    display: initial;
   }
   .comandos {
     display: flex;
     flex-direction: row;
     align-items: center;
     height: auto;
-
     margin: 0 5VW;
     justify-content: space-between;
-    
   }
   .button_desktop {
     display: inherit;

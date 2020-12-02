@@ -1,5 +1,5 @@
 import { Component } from "../../framework/components/component.js";
-
+import { navigateRouter } from "../../js/router.handler.js";
 
 export class PlayerComponent extends Component {
 
@@ -8,11 +8,11 @@ export class PlayerComponent extends Component {
         super(import.meta.url)
     }
 
-    parent =  document.querySelector('#comand_player')
+    parent = document.querySelector('#comand_player')
     closeEvent = new CustomEvent("closeComand");
     openEvent = new CustomEvent("openComand");
 
-    equ =  document.querySelector('#equalizer');
+    equ = document.querySelector('#equalizer');
     openEqu = new CustomEvent("openEq");
     closeEqu = new CustomEvent("closeEq");
 
@@ -27,54 +27,54 @@ export class PlayerComponent extends Component {
         let btnLike = this.shadowRoot.querySelector("#btn_like");
         let btnLiked = this.shadowRoot.querySelector("#btn_liked");
         let btnScore = this.shadowRoot.querySelector("#btn_score_desk");
-        let btnScored = this.shadowRoot.querySelector("#btn_scored_desk"); 
+        let btnScored = this.shadowRoot.querySelector("#btn_scored_desk");
         let btnPlay = this.shadowRoot.querySelector("#btn_play");
         let btnPause = this.shadowRoot.querySelector("#btn_pause");
         let btnOption = this.shadowRoot.querySelector("#btn_options");
         let spiner = this.shadowRoot.querySelector("#spiner");
         spiner.classList.toggle("button_oculto");
-        let elem = this.shadowRoot.querySelector("#myBar"); 
+        let elem = this.shadowRoot.querySelector("#myBar");
         let width = 1;
         //#endregion
         //#region accionamiento Botones consola 
-        btnLike.addEventListener('click', function(){
+        btnLike.addEventListener('click', function () {
             this.classList.toggle("button_oculto");
             btnLiked.classList.toggle("button_oculto");
         });
-        btnLiked.addEventListener('click', function(){
+        btnLiked.addEventListener('click', function () {
             this.classList.toggle("button_oculto");
             btnLike.classList.toggle("button_oculto");
         });
-        btnScore.addEventListener('click', function(){
+        btnScore.addEventListener('click', function () {
             this.classList.toggle("button_oculto");
             btnScored.classList.toggle("button_oculto");
         });
-        btnScored.addEventListener('click', function(){
+        btnScored.addEventListener('click', function () {
             this.classList.toggle("button_oculto");
             btnScore.classList.toggle("button_oculto");
-        }); 
+        });
 
 
-        btnLike.addEventListener('click', function(){
+        btnLike.addEventListener('click', function () {
             this.classList.toggle("button_oculto");
             btnLiked.classList.toggle("button_oculto");
         });
-        btnLiked.addEventListener('click', function(){
+        btnLiked.addEventListener('click', function () {
             this.classList.toggle("button_oculto");
             btnLike.classList.toggle("button_oculto");
         });
-        btnScore.addEventListener('click', function(){
+        btnScore.addEventListener('click', function () {
             this.classList.toggle("button_oculto");
             btnScored.classList.toggle("button_oculto");
         });
-        btnScored.addEventListener('click', function(){
+        btnScored.addEventListener('click', function () {
             this.classList.toggle("button_oculto");
             btnScore.classList.toggle("button_oculto");
-        }); 
+        });
 
-        btnPlay.addEventListener('click',function() {
+        btnPlay.addEventListener('click', function () {
             spiner.classList.toggle("button_oculto");
-            setTimeout(function(){
+            setTimeout(function () {
                 spiner.classList.toggle("button_oculto");
                 btnPlay.classList.toggle("button_oculto");
                 btnPause.classList.toggle("button_oculto");
@@ -83,22 +83,21 @@ export class PlayerComponent extends Component {
             }, 2000);
         });
 
-        btnPause.addEventListener('click',function (){
+        btnPause.addEventListener('click', function () {
             this.classList.toggle("button_oculto");
             btnPlay.classList.toggle("button_oculto");
             paused = true;
         });
 
-        btnOption.addEventListener('click',function(){
+        btnOption.addEventListener('click', function () {
             console.log(element.parent.style.display)
-            if(element.parent.style.display == 'none')
-            {
+            if (element.parent.style.display == 'none') {
                 element.parent.dispatchEvent(element.openEvent);
             }
-            else{
+            else {
                 element.parent.dispatchEvent(element.closeEvent);
             }
-            
+
         });
         let btnEq = this.shadowRoot.querySelector("#btn_eq");
         let btnEqSel = this.shadowRoot.querySelector("#btn_eqsel");
@@ -109,63 +108,67 @@ export class PlayerComponent extends Component {
         let btnRepeat = this.shadowRoot.querySelector("#btn_repeat");
         let btnRepeatSel = this.shadowRoot.querySelector("#btn_repeatsel");
 
-        btnEq.addEventListener('click', function(){
+        btnEq.addEventListener('click', function () {
             this.classList.toggle("button_oculto");
             btnEqSel.classList.toggle("button_oculto");
             element.equ.dispatchEvent(element.openEqu);
         });
-        btnEqSel.addEventListener('click', function(){
+        btnEqSel.addEventListener('click', function () {
             this.classList.toggle("button_oculto");
             btnEq.classList.toggle("button_oculto");
             element.equ.dispatchEvent(element.closeEqu);
         });
 
-        btnMod.addEventListener('click', function(){
+        btnMod.addEventListener('click', function () {
             this.classList.toggle("button_oculto");
             btnModSel.classList.toggle("button_oculto");
             element.mode.dispatchEvent(element.openMode);
         });
 
-        btnModSel.addEventListener('click', function(){
+        btnModSel.addEventListener('click', function () {
             this.classList.toggle("button_oculto");
             btnMod.classList.toggle("button_oculto");
             element.mode.dispatchEvent(element.closeMode);
         });
 
-        btnRandom.addEventListener('click', function(){
+        btnRandom.addEventListener('click', function () {
             this.classList.toggle("button_oculto");
             btnRandomSel.classList.toggle("button_oculto");
         });
 
-        btnRandomSel.addEventListener('click', function(){
+        btnRandomSel.addEventListener('click', function () {
             this.classList.toggle("button_oculto");
             btnRandom.classList.toggle("button_oculto");
         });
 
 
-        btnRepeat.addEventListener('click', function(){
+        btnRepeat.addEventListener('click', function () {
             this.classList.toggle("button_oculto");
             btnRepeatSel.classList.toggle("button_oculto");
         });
-        btnRepeatSel.addEventListener('click', function(){
+        btnRepeatSel.addEventListener('click', function () {
             this.classList.toggle("button_oculto");
             btnRepeat.classList.toggle("button_oculto");
         });
         //#endregion 
 
 
+        let gototema = this.shadowRoot.querySelector(".text_desck")
+        gototema.addEventListener('click', function () {
+            navigateRouter('description-page')
+        })
         function move() {
             let id = setInterval(frame, 500);
             function frame() {
-              if (width >= 100){
-                clearInterval(id);
-                width = 1;
-                elem.style.width = width + '%'; 
-              } else {
-                  if (!paused)
-                    width++; 
-                    elem.style.width = width + '%'; 
-              }
+                if (width >= 100) {
+                    clearInterval(id);
+                    width = 1;
+                    elem.style.width = width + '%';
+                } else {
+                    if (!paused)
+                        width++;
+                    elem.style.width = width + '%';
+                }
             }
         }
     }
@@ -174,7 +177,7 @@ export class PlayerComponent extends Component {
     }
 
 
-    
+
 
 
 }

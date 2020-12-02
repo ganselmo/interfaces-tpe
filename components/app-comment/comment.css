@@ -2,6 +2,12 @@ app-comment-reply {
     height: 0;
 }
 
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .comment-container {
     position: relative;
     display: flex;
@@ -11,7 +17,6 @@ app-comment-reply {
     /* Coment */
     width: 355px;
     height: auto;
-    left: 10px;
     /* GreyDisabled */
     background: var(--disabled-color);
     border-radius: 20px;
@@ -92,23 +97,18 @@ app-comment-reply {
 
 @media only screen and (min-width: 600px) and (max-width: 1000px) {
     .comment-container {
-        left: 20px;
         width: 90%;
     }
-
     .comment-header {
         width: 90%;
     }
-
-    .comment-header .comment-date > div,  .comment-header .comment-autor > div{
+    .comment-header .comment-date>div, .comment-header .comment-autor>div {
         font-size: var(--normal-font);
     }
-
     .comment-body {
         width: 90%;
         height: auto;
     }
-
     .comment-footer {
         width: 90%;
     }
@@ -116,23 +116,18 @@ app-comment-reply {
 
 @media (min-width: 1000px) {
     .comment-container {
-        left: 200px;
         width: 60%;
     }
-
     .comment-header {
         width: 90%;
     }
-
-    .comment-header .comment-date > div,  .comment-header .comment-autor > div{
+    .comment-header .comment-date>div, .comment-header .comment-autor>div {
         font-size: var(--normal-font);
     }
-
     .comment-body {
         width: 90%;
         height: auto;
     }
-
     .comment-footer {
         width: 90%;
     }

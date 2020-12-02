@@ -30,6 +30,7 @@ import { LinePodcastComponent } from '../components/line-podcast/line-podcast.js
 import { LineLibraryComponent } from '../components/line-library/line-library.js';
 import { LibraryPage } from '../pages/library/library-page.js';
 import { VolumenComponent } from '../Components/app-volumen-mov/volumen-mov.js';
+import { DescriptionPage } from '../pages/description/description.js';
 
 
 
@@ -67,5 +68,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     window.customElements.define('profile-page', ProfilePage);
     window.customElements.define('help-page', HelpPage);
     window.customElements.define('search-page', SearchResultPage);
-    window.customElements.define('library-page',LibraryPage)
+    window.customElements.define('library-page',LibraryPage);
+    window.customElements.define('description-page',DescriptionPage)
 })
