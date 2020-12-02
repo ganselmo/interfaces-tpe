@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     closeEq();
     closeMode();
     closeComand();
-    //closePlay();
+    closePlay();
 
 
     document.querySelector('main').addEventListener('click',closeEq);

@@ -90,7 +90,6 @@ export class PlayerComponent extends Component {
         });
 
         btnOption.addEventListener('click', function () {
-            console.log(element.parent.style.display)
             if (element.parent.style.display == 'none') {
                 element.parent.dispatchEvent(element.openEvent);
             }
@@ -176,6 +175,23 @@ export class PlayerComponent extends Component {
                 }
             }
         }
+        let text_info = this.shadowRoot.querySelector('.text_info')
+
+        text_info.addEventListener("changeSong",function(e)
+        {
+
+            let names = this.querySelectorAll(".name")
+            let artists = this.querySelectorAll(".artista")
+            names.forEach(element => {
+                element.innerHTML = e.detail.Name
+            });
+            artists.forEach(element => {
+                element.innerHTML = e.detail.Artist
+            });
+            
+            let img = element.shadowRoot.querySelector(".icon_actual img")
+            img.setAttribute('src',e.detail.img)
+        })
     }
     changes() {
 

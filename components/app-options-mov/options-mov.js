@@ -21,7 +21,6 @@ export class OptionsComponent extends Component {
 
 
   init() {
-    console.log(this.scoreparent)
     let element = this
     //#region obtencion de Buttons
     let btnEq = this.shadowRoot.querySelector("#btn_eq");

@@ -10,6 +10,10 @@ app-comment-reply {
    
 }
 
+.comment-reply-container{
+    width: 100%;
+}
+
 .comment-container {
     position: relative;
     display: flex;
@@ -98,8 +102,11 @@ app-comment-reply {
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1000px) {
+    .comment-reply-container{
+        width: 60%;
+    }
     .comment-container {
-        width: 90%;
+        width: 60%;
     }
     .comment-header {
         width: 90%;
@@ -117,6 +124,9 @@ app-comment-reply {
 }
 
 @media (min-width: 1000px) {
+    .comment-reply-container{
+        width: 60%;
+    }
     .comment-container {
         width: 60%;
     }

@@ -5,7 +5,6 @@
     justify-content: center;
     align-items: center;
     width: 355px;
-    left: 10px;
     background: var(--disabled-color);
     border-radius: 20px;
     padding-bottom: 5px;
@@ -86,8 +85,8 @@
 
 @media only screen and (min-width: 600px) and (max-width: 1000px) {
     .comment-container {
-        left: 20px;
-        width: 90%;
+
+        width: 100%;
     }
 
     .comment-header {
@@ -110,8 +109,8 @@
 
 @media (min-width: 1000px) {
     .comment-container {
-        left: 200px;
-        width: 60%;
+
+        width: 100%;
     }
 
     .comment-header {

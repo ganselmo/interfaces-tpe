@@ -26,6 +26,5 @@ export class BuscadorComponent extends Component {
 
     }
     find(location) {
-        console.log(location)
     }
 }

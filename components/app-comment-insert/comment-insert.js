@@ -35,7 +35,6 @@ export class CommentInsertComponent extends Component {
         
         function ocultar() {
             let container = this.parentElement.parentElement;
-            console.log(this.parentElement);
             container.classList.add("oculto");
         }
         //#region Score Stars

@@ -8,6 +8,9 @@ export class LineSongComponent extends Component {
     scoreDesk
     elementer = this
     closeOthers = new CustomEvent('closeContext')
+    playerParent = document.querySelector("#player");
+    text_info = document.querySelector('#player').shadowRoot.querySelector(".text_info")
+    sendData
     constructor() {
         super(import.meta.url)
     }
@@ -23,7 +26,7 @@ export class LineSongComponent extends Component {
         let rand = this.getRandImage()
         this.shadowRoot.querySelector(".imageSong.image.normal.squared img").setAttribute('src', rand)
 
-        this.shadowRoot.querySelector(".imageSong2.image.normal.squared img").setAttribute('src',rand)
+        this.shadowRoot.querySelector(".imageSong2.image.normal.squared img").setAttribute('src', rand)
 
         let buttonLike = this.shadowRoot.querySelector(".like");
         let buttonFav = this.shadowRoot.querySelector(".score");
@@ -66,7 +69,10 @@ export class LineSongComponent extends Component {
 
         });
 
-
+        this.sendData = new CustomEvent("changeSong",
+            {
+                detail: this.song
+            });
 
 
         function calific() {
@@ -81,10 +87,28 @@ export class LineSongComponent extends Component {
 
             }
             scores.forEach(element => {
-                console.log(element)
-                element.removeEventListener('click',calific)
+                element.removeEventListener('click', calific)
             });
         }
+        let imagePlay2 = this.shadowRoot.querySelector('.imagePlay2')
+
+        imagePlay2.addEventListener('click',
+            function () {
+                elementref.playerParent.dispatchEvent(new CustomEvent('openPlay'))
+                elementref.text_info.dispatchEvent(elementref.sendData)
+            })
+
+        let imagePlay = this.shadowRoot.querySelector('.imagePlay')
+
+        imagePlay.addEventListener('click',
+            function () {
+                elementref.playerParent.dispatchEvent(new CustomEvent('openPlay'))
+                elementref.text_info.dispatchEvent(elementref.sendData)
+
+            })
+
+
+
 
     }
 

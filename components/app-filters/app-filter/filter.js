@@ -28,7 +28,6 @@ export class FilterComponent extends Component {
     }
 
     changes() {
-        console.log(this.attributes.isClicked.value)
         if(this.attributes.isClicked.value=='true')
         {
             this.shadowRoot.querySelector('button').classList.remove('secondary') 

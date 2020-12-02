@@ -31,7 +31,6 @@ export class CommentComponent extends Component {
             let replyPanel = self.nextElementSibling;
             replyPanel.childNodes.forEach(element => {
                 let e = element.shadowRoot.firstElementChild;
-                console.log(e);
                 if (e.style.maxHeight) {
                     e.style.maxHeight = 0;
                     setTimeout(function () {

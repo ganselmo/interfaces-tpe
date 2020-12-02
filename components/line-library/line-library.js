@@ -5,9 +5,13 @@ import { addMenus, getMenus } from "../../js/multiple-menu.handler.js";
 export class LineLibraryComponent extends Component {
 
     song
+   
     scoreDesk
     elementer = this
     closeOthers = new CustomEvent('closeContext')
+    playerParent = document.querySelector("#player");
+    text_info = document.querySelector('#player').shadowRoot.querySelector(".text_info")
+    sendData
     constructor() {
         super(import.meta.url)
     }
@@ -22,16 +26,18 @@ export class LineLibraryComponent extends Component {
 
         let rand = this.getRandImage()
         this.shadowRoot.querySelector(".imageSong.image.normal.squared img").setAttribute('src', rand)
-
-        this.shadowRoot.querySelector(".imageSong2.image.normal.squared img").setAttribute('src',rand)
+        this.shadowRoot.querySelector(".imageSong2.image.normal.squared img").setAttribute('src', rand)
 
         let buttonLike = this.shadowRoot.querySelector(".like");
         let buttonFav = this.shadowRoot.querySelector(".score");
         let buttonNotLiked = this.shadowRoot.querySelector(".notliked");
         let buttonLiked = this.shadowRoot.querySelector(".liked");
 
-  
-
+        this.song.img = rand;
+        this.sendData = new CustomEvent("changeSong",
+            {
+                detail: this.song
+            });
         let options = this.shadowRoot.querySelector(".options");
 
         buttonLike.addEventListener('click', function () {
@@ -49,8 +55,8 @@ export class LineLibraryComponent extends Component {
         let buttonTrash = this.shadowRoot.querySelector(".trash");
 
         buttonTrash.addEventListener('click', function () {
- 
-            elementref.shadowRoot.querySelector('.parent').style.display ='none'
+
+            elementref.shadowRoot.querySelector('.parent').style.display = 'none'
 
         })
 
@@ -89,9 +95,29 @@ export class LineLibraryComponent extends Component {
             }
             scores.forEach(element => {
                 console.log(element)
-                element.removeEventListener('click',calific)
+                element.removeEventListener('click', calific)
             });
         }
+
+
+        let imagePlay2 = this.shadowRoot.querySelector('.imagePlay2')
+
+        imagePlay2.addEventListener('click',
+            function () {
+                elementref.playerParent.dispatchEvent(new CustomEvent('openPlay'))
+                elementref.text_info.dispatchEvent(elementref.sendData)
+            })
+
+        let imagePlay = this.shadowRoot.querySelector('.imagePlay')
+
+        imagePlay.addEventListener('click',
+            function () {
+                elementref.playerParent.dispatchEvent(new CustomEvent('openPlay'))
+                elementref.text_info.dispatchEvent(elementref.sendData)
+
+            })
+
+
 
     }
 
