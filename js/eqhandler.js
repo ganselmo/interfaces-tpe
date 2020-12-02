@@ -73,12 +73,12 @@ export function closePlay() {
 }
 
 export function openScore() {
-    popupAction.classList.toggle("show");
+    popupAction.classList.add("show");
     popupAction.classList.remove("oculto");
 }
 
 export function closeScore() {
-    popupAction.classList.toggle("show");
+    popupAction.classList.remove("show");
 }
 
 
