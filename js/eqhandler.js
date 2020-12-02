@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector('main').addEventListener('click', closeEq);
     document.querySelector('main').addEventListener('click', closeMode);
     document.querySelector('main').addEventListener('click', closeComand);
-
+    document.querySelector('#routerLink').addEventListener('click', closeScore);
 
 })
 
@@ -49,6 +49,8 @@ export function closeEq() {
 
 export function openComand() {
     comandPlay.style.display = 'initial'
+    closeVolume();
+
 }
 
 export function closeComand() {
@@ -81,5 +83,14 @@ export function closeScore() {
 
 
 export function showVolumen() {
+
+    closeEq();
+    closeMode();
+    closeComand();
+
     volumen.classList.toggle("oculto");
+}
+export function closeVolume() {
+
+    volumen.classList.add("oculto");
 } 

@@ -72,6 +72,13 @@ main#routerLink {
 
 }
 
+app-volumen{
+  position: fixed;
+  right: -15px;
+  bottom: 56px;
+  height: 36vw;
+}
+
 @media(min-width: 600px) {
   #comand_player_desk {
     display: inherit;

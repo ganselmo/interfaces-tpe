@@ -6,7 +6,7 @@
     flex-direction: row;
     background-color: var(--base-color);
     width: 266px;
-    right: 12vw;
+    right: 22vw;
     position: fixed;
     bottom: 64px;
     justify-content: flex-end;

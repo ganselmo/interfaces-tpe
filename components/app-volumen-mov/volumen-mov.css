@@ -1,49 +1,48 @@
-div{
-    width: 100px;
-    height: 25px;
-    background-color: var(--base-color);
-    display: block;
-    bottom: 116px;
-    right: 1%;
-    transform:rotate(270deg); 
+div {
+  width: 214px;
+  height: 27px;
+  background-color: var(--base-color);
 
+  transform: rotate(270deg);
 }
 
 .slider {
-    -webkit-appearance: none;
-    width: 90%;
-    height: 5px;
-    background: var(--primary-color);
-    outline: none;
-   -webkit-transition: .2s;
-    transition: opacity .2s;
+  -webkit-appearance: none;
+  width: 101px;
+  left: 9px;
+  position: relative;
+  height: 5px;
+  background: var(--primary-color);
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: var(--secondary-color);
+  cursor: pointer;
+}
+
+@media(min-width: 600px) {
+  div {
+    bottom: 20px;
+    transform: none;
+    right: 5%;
   }
-  
-  .slider:hover {
-    opacity: 1;
-  }
-  
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: var(--secondary-color);
-    cursor: pointer;
-  }
-  
-  .slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    background: var(--secondary-color);
-    cursor: pointer;
-  }
- 
-  @media(min-width: 600px){
-      div{
-          bottom: 20px;
-          transform: none;
-          right: 5%;
-      }
-  }
+}
