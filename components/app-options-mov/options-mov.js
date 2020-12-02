@@ -15,7 +15,7 @@ export class OptionsComponent extends Component {
   closeMode= new CustomEvent("closeMode");
   openMode= new CustomEvent("openMode");
  
-  scoreparent= document.querySelector('.popup');
+  scoreparent= document.querySelector('#myPopup');
   closeScore= new CustomEvent("closeScore");
   openScore= new CustomEvent("openScore");
 

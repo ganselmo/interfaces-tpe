@@ -2,27 +2,28 @@ let eq = document.querySelector("#equalizer");
 let comandPlay = document.querySelector("#comand_player");
 let modeSelect = document.querySelector("#mode");
 let setPlayer = document.querySelector("#player");
-let popup = document.querySelector(".popup");
-let popupAction = document.querySelector("#myPopup");
 
+let popupAction = document.querySelector("#myPopup");
+let volumen = document.querySelector("#volumen");
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    comandPlay.addEventListener('openComand',openComand);
-    comandPlay.addEventListener('closeComand',closeComand);
+    comandPlay.addEventListener('openComand', openComand);
+    comandPlay.addEventListener('closeComand', closeComand);
 
-    popup.addEventListener('openScore',openScore);
-    popup.addEventListener('closeScore',closeScore);
-
-    eq.addEventListener('openEq',openEq);
-    eq.addEventListener('closeEq',closeEq);
+    popupAction.addEventListener('openScore', openScore);
+    popupAction.addEventListener('closeScore', closeScore);
 
 
+    eq.addEventListener('openEq', openEq);
+    eq.addEventListener('closeEq', closeEq);
 
-    modeSelect.addEventListener('openMode',openMode);
-    modeSelect.addEventListener('closeMode',closeMode);
-    setPlayer.addEventListener('openPlay',openPlay);
-    setPlayer.addEventListener('closePlay',closePlay);
+    volumen.addEventListener('showVolumen', showVolumen);
+
+    modeSelect.addEventListener('openMode', openMode);
+    modeSelect.addEventListener('closeMode', closeMode);
+    setPlayer.addEventListener('openPlay', openPlay);
+    setPlayer.addEventListener('closePlay', closePlay);
 
 
     closeEq();
@@ -31,9 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
     closePlay();
 
 
-    document.querySelector('main').addEventListener('click',closeEq);
-    document.querySelector('main').addEventListener('click',closeMode);
-    document.querySelector('main').addEventListener('click',closeComand);
+    document.querySelector('main').addEventListener('click', closeEq);
+    document.querySelector('main').addEventListener('click', closeMode);
+    document.querySelector('main').addEventListener('click', closeComand);
 
 
 })
@@ -69,12 +70,16 @@ export function closePlay() {
     setPlayer.style.display = 'none'
 }
 
-export function openScore(){
+export function openScore() {
+    popupAction.classList.toggle("show");
+    popupAction.classList.remove("oculto");
+}
+
+export function closeScore() {
     popupAction.classList.toggle("show");
 }
 
 
-export function closeScore(){
-    popupAction.classList.toggle("show");
-}
-
+export function showVolumen() {
+    volumen.classList.toggle("oculto");
+} 

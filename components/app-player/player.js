@@ -20,6 +20,14 @@ export class PlayerComponent extends Component {
     openMode = new CustomEvent("openMode");
     closeMode = new CustomEvent("closeMode");
 
+
+    parentVolumen =  document.querySelector('#volumen');
+    showVolumen = new CustomEvent("showVolumen");
+
+    parentScore = document.querySelector("#myPopup");
+    openScore = new CustomEvent("openScore");
+    closeScore = new CustomEvent("closeScore");
+
     init() {
         //#region captura de buttons
         let element = this;
@@ -32,6 +40,7 @@ export class PlayerComponent extends Component {
         let btnPause = this.shadowRoot.querySelector("#btn_pause");
         let btnOption = this.shadowRoot.querySelector("#btn_options");
         let spiner = this.shadowRoot.querySelector("#spiner");
+        let btnVolumen = this.shadowRoot.querySelector("#btn_volumen");
         spiner.classList.toggle("button_oculto");
         let elem = this.shadowRoot.querySelector("#myBar");
         let width = 1;
@@ -48,10 +57,12 @@ export class PlayerComponent extends Component {
         btnScore.addEventListener('click', function () {
             this.classList.toggle("button_oculto");
             btnScored.classList.toggle("button_oculto");
+            element.parentScore.dispatchEvent(element.openScore);
         });
         btnScored.addEventListener('click', function () {
             this.classList.toggle("button_oculto");
             btnScore.classList.toggle("button_oculto");
+            element.parentScore.dispatchEvent(element.closeScore);
         });
 
 
@@ -149,6 +160,10 @@ export class PlayerComponent extends Component {
             this.classList.toggle("button_oculto");
             btnRepeat.classList.toggle("button_oculto");
         });
+
+        btnVolumen.addEventListener('click', function(){
+            element.parentVolumen.dispatchEvent(element.showVolumen);
+        })
         //#endregion 
 
 
