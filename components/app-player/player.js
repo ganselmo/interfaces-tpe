@@ -66,14 +66,6 @@ export class PlayerComponent extends Component {
         });
 
 
-        btnLike.addEventListener('click', function () {
-            this.classList.toggle("button_oculto");
-            btnLiked.classList.toggle("button_oculto");
-        });
-        btnLiked.addEventListener('click', function () {
-            this.classList.toggle("button_oculto");
-            btnLike.classList.toggle("button_oculto");
-        });
         btnScore.addEventListener('click', function () {
             this.classList.toggle("button_oculto");
             btnScored.classList.toggle("button_oculto");
