@@ -66,15 +66,6 @@ export class PlayerComponent extends Component {
         });
 
 
-        btnScore.addEventListener('click', function () {
-            this.classList.toggle("button_oculto");
-            btnScored.classList.toggle("button_oculto");
-        });
-        btnScored.addEventListener('click', function () {
-            this.classList.toggle("button_oculto");
-            btnScore.classList.toggle("button_oculto");
-        });
-
         btnPlay.addEventListener('click', function () {
             spiner.classList.toggle("button_oculto");
             setTimeout(function () {
