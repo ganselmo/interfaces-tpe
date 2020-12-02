@@ -7,7 +7,7 @@
     background-color: var(--base-color);
     right: 0;
     position: fixed;
-    bottom: 64px;
+    bottom: 70px;
     justify-content: space-around;
     z-index: 210;
 }

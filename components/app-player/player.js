@@ -157,6 +157,11 @@ export class PlayerComponent extends Component {
         gototema.addEventListener('click', function () {
             navigateRouter('description-page')
         })
+        
+        let gototemam = this.shadowRoot.querySelector(".text_movil")
+        gototemam.addEventListener('click', function () {
+            navigateRouter('description-page')
+        })
         function move() {
             let id = setInterval(frame, 500);
             function frame() {

@@ -6,7 +6,7 @@ div{
     flex-direction: row;
     background-color: var(--base-color);
     width: 266px;
-    right: 10vw;
+    left: 0vw;
     position: fixed;
     bottom: 64px;
     justify-content: flex-end;
@@ -17,3 +17,28 @@ app-slider
     position: relative;
     margin: 0 5px;
 }
+
+
+@media (min-width: 600px) {
+    div{
+        display: flex;
+        align-self: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        background-color: var(--base-color);
+        width: 266px;
+        right: 10vw;
+        position: fixed;
+        bottom: 64px;
+        justify-content: flex-end;
+    
+    }
+    app-slider
+    {
+        position: relative;
+        margin: 0 5px;
+    }
+}
+
+
