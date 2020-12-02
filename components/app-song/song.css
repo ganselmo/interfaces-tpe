@@ -8,6 +8,7 @@
     height: 400px;
     padding-top: 5px;
     padding-bottom: 5px;
+
 }
 
 .song-display-container {
@@ -47,7 +48,7 @@
     width: 355px;
     height: 210px;
     background-color: var(--tertiary-color);
-    border-radius: 10px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -102,7 +103,7 @@
         flex-direction: row;
         width: 600px;
         background-color: var(--secondary-color);
-        border-radius: 10px;
+        border-radius: 20px;
     }
 }
 
@@ -112,7 +113,7 @@
         width: 1200px;
 
         background-color: var(--secondary-color);
-        border-radius: 10px;
+        border-radius: 20px;
         /* 3d effect */
         transform-style: preserve-3d;
         perspective: 1000px;
