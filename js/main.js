@@ -29,7 +29,7 @@ import { LineSongComponent } from '../components/line-song/line-song.js';
 import { LinePodcastComponent } from '../components/line-podcast/line-podcast.js';
 import { LineLibraryComponent } from '../components/line-library/line-library.js';
 import { LibraryPage } from '../pages/library/library-page.js';
-import { VolumenComponent } from '../Components/app-volumen-mov/volumen-mov.js';
+import { VolumenComponent } from '../components/app-volumen-mov/volumen-mov.js';
 import { DescriptionPage } from '../pages/description/description.js';
 
 
