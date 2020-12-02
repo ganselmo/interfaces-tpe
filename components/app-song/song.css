@@ -102,7 +102,7 @@
     .song-container {
         flex-direction: row;
         width: 600px;
-        background-color: var(--secondary-color);
+        background-color: rgba(0, 0 , 0 , 0.6);
         border-radius: 20px;
     }
 }
@@ -112,7 +112,7 @@
         flex-direction: row;
         width: 1200px;
 
-        background-color: var(--secondary-color);
+        background-color: rgba(0, 0 , 0 , 0.6);
         border-radius: 20px;
         /* 3d effect */
         transform-style: preserve-3d;
