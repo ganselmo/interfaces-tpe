@@ -1,4 +1,4 @@
-import { Component } from "../../framework/components/component.js";
+import { Component } from "../../../framework/components/component.js";
 
 
 export class FilterComponent extends Component {
@@ -15,28 +15,17 @@ export class FilterComponent extends Component {
     init() {
       
         this.shadowRoot.querySelector('button').innerHTML =this.attributes.name.value
-
-        if(this.attributes.isClicked.value=='true')
+        let element = this
+        element.shadowRoot.querySelector('button').addEventListener('click',function()
         {
-            this.shadowRoot.querySelector('button').classList.remove('secondary') 
-            this.shadowRoot.querySelector('button').classList.add('tertiary') 
-        }
-        else{
-            this.shadowRoot.querySelector('button').classList.remove('tertiary') 
-            this.shadowRoot.querySelector('button').classList.add('secondary') 
-        }
+
+            element.filters.dispatchEvent(element.closeFiltersEvent);
+        
+        })
     }
 
     changes() {
-        if(this.attributes.isClicked.value=='true')
-        {
-            this.shadowRoot.querySelector('button').classList.remove('secondary') 
-            this.shadowRoot.querySelector('button').classList.add('tertiary') 
-        }
-        else{
-            this.shadowRoot.querySelector('button').classList.remove('tertiary') 
-            this.shadowRoot.querySelector('button').classList.add('secondary') 
-        }
+      
     }
 
 
