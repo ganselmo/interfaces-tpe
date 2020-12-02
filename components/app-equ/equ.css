@@ -1,4 +1,4 @@
-div{
+.sliders{
     display: flex;
     align-self: center;
     align-items: center;
@@ -6,7 +6,7 @@ div{
     flex-direction: row;
     background-color: var(--base-color);
     width: 266px;
-    left: 0vw;
+    right: 12vw;
     position: fixed;
     bottom: 64px;
     justify-content: flex-end;
@@ -20,7 +20,7 @@ app-slider
 
 
 @media (min-width: 600px) {
-    div{
+    .sliders{
         display: flex;
         align-self: center;
         align-items: center;
@@ -28,7 +28,7 @@ app-slider
         flex-direction: row;
         background-color: var(--base-color);
         width: 266px;
-        right: 10vw;
+        right:8vw;
         position: fixed;
         bottom: 64px;
         justify-content: flex-end;
