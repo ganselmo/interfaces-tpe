@@ -15,6 +15,10 @@ export class PlayerComponent extends Component {
     parentVolumen =  document.querySelector('#volumen');
     showVolumen = new CustomEvent("showVolumen");
 
+    parentScore = document.querySelector("#myPopup");
+    openScore = new CustomEvent("openScore");
+    closeScore = new CustomEvent("closeScore");
+
     init() {
         //#region captura de buttons
         let element = this;
@@ -45,10 +49,13 @@ export class PlayerComponent extends Component {
         btnScore.addEventListener('click', function(){
             this.classList.toggle("button_oculto");
             btnScored.classList.toggle("button_oculto");
+            element.parentScore.dispatchEvent(element.openScore);
         });
         btnScored.addEventListener('click', function(){
             this.classList.toggle("button_oculto");
             btnScore.classList.toggle("button_oculto");
+            element.parentScore.dispatchEvent(element.closeScore);
+
         }); 
 
 

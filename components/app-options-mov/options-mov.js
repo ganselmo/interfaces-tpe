@@ -33,6 +33,9 @@ export class OptionsComponent extends Component {
     let btnRepeatSel = this.shadowRoot.querySelector("#btn_repeatsel");
     let btnScore = this.shadowRoot.querySelector("#btn_score");
     let btnScored = this.shadowRoot.querySelector("#btn_scored");
+
+
+
   //#endregion
   //#region cambios de estado
  
@@ -88,8 +91,8 @@ export class OptionsComponent extends Component {
       this.classList.toggle("oculto");
       btnScored.classList.toggle("oculto");
       element.scoreparent.dispatchEvent(element.openScore);
-      console.log(element.scoreparent);
      });
+
     btnScored.addEventListener('click', function(){
       this.classList.toggle("oculto");
       btnScore.classList.toggle("oculto");
