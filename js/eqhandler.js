@@ -2,7 +2,6 @@ let eq = document.querySelector("#equalizer");
 let comandPlay = document.querySelector("#comand_player");
 let modeSelect = document.querySelector("#mode");
 let setPlayer = document.querySelector("#player");
-let popup = document.querySelector(".popup");
 let popupAction = document.querySelector("#myPopup");
 let volumen = document.querySelector("#volumen");
 
@@ -10,10 +9,11 @@ let volumen = document.querySelector("#volumen");
 document.addEventListener("DOMContentLoaded", function () {
 
     comandPlay.addEventListener('openComand',openComand);
-    comandPlay.addEventListener('closeComend',closeComand);
+    comandPlay.addEventListener('closeComand',closeComand);
 
-    popup.addEventListener('openScore',openScore);
-    popup.addEventListener('closeScore',closeScore);
+    popupAction.addEventListener('openScore',openScore);
+    popupAction.addEventListener('closeScore',closeScore);
+
 
     eq.addEventListener('openEq',openEq);
     eq.addEventListener('closeEq',closeEq);
@@ -72,11 +72,11 @@ export function closePlay() {
 
 export function openScore(){
     popupAction.classList.toggle("show");
+    popupAction.classList.remove("oculto");
 }
 
-
 export function closeScore(){
-    popupAction.classList.toggle("show");
+    popupAction.classList.add("oculto");
 }
 
 export function showVolumen(){

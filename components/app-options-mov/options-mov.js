@@ -15,13 +15,12 @@ export class OptionsComponent extends Component {
   closeMode= new CustomEvent("closeMode");
   openMode= new CustomEvent("openMode");
  
-  scoreparent= document.querySelector('.popup');
+  scoreparent= document.querySelector('#myPopup');
   closeScore= new CustomEvent("closeScore");
   openScore= new CustomEvent("openScore");
 
 
   init() {
-    console.log(this.scoreparent)
     let element = this
     //#region obtencion de Buttons
     let btnEq = this.shadowRoot.querySelector("#btn_eq");
@@ -89,6 +88,7 @@ export class OptionsComponent extends Component {
       this.classList.toggle("oculto");
       btnScored.classList.toggle("oculto");
       element.scoreparent.dispatchEvent(element.openScore);
+      console.log(element.scoreparent);
      });
     btnScored.addEventListener('click', function(){
       this.classList.toggle("oculto");
