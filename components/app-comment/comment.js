@@ -9,35 +9,29 @@ export class CommentComponent extends Component {
 
     init() {
         //#region reply
-        let comments = document.querySelectorAll("app-comment");
-        let lastReply;
-        let commentFooterOptions;
+        let comments = this.shadowRoot.querySelectorAll("app-comment");
 
-        for (let i = 0; i < comments.length; i++) {
-            if (comments[i].shadowRoot.lastChild != null) {
-                lastReply = comments[i].shadowRoot.lastChild;
+        let commentFooterOptions = this.shadowRoot.querySelector(".comment-footer-options");
+
+        for (let i = 0; i < commentFooterOptions.children.length; i++) {
+            const elem = commentFooterOptions.children[i];
+            if (elem.firstChild != null) {
+                if (elem.classList.contains("comment-expand")) {
+                    elem.addEventListener("click", appendSeeOption);
+                }
+                if (elem.classList.contains("comment-reply")) {
+                    elem.addEventListener("click", appendInput);
+                }
             }
         }
-
-        commentFooterOptions = lastReply.previousElementSibling.lastElementChild.firstElementChild;
-
-        commentFooterOptions.childNodes.forEach(e => {
-            if (e.firstChild != null) {
-                if (e.classList.contains("comment-expand")) {
-                    e.addEventListener("click", appendSeeOption);
-                }
-                if (e.classList.contains("comment-reply")) {
-                    e.addEventListener("click", appendInput);
-                }
-            }
-        });
-
+        
         function appendSeeOption() {
-
+            
             let self = this.parentElement.parentElement.parentElement;
             let replyPanel = self.nextElementSibling;
             replyPanel.childNodes.forEach(element => {
                 let e = element.shadowRoot.firstElementChild;
+                console.log(e);
                 if (e.style.maxHeight) {
                     e.style.maxHeight = 0;
                     setTimeout(function () {
@@ -53,14 +47,12 @@ export class CommentComponent extends Component {
 
 
         function appendInput() {
-            console.log(window);
             this.classList.add("oculto");
             let insertComment = document.createElement("app-comment-insert");
             if (window.innerWidth < 600) {
                 insertComment.style.transform = "scale(0.8)";
             }
             this.parentElement.parentElement.parentElement.appendChild(insertComment);
-            console.log(insertComment);
         }
         //#endregion
 
