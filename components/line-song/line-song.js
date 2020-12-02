@@ -25,7 +25,7 @@ export class LineSongComponent extends Component {
 
         let rand = this.getRandImage()
         this.shadowRoot.querySelector(".imageSong.image.normal.squared img").setAttribute('src', rand)
-
+        this.song.img = rand
         this.shadowRoot.querySelector(".imageSong2.image.normal.squared img").setAttribute('src', rand)
 
         let buttonLike = this.shadowRoot.querySelector(".like");
@@ -102,6 +102,7 @@ export class LineSongComponent extends Component {
 
         imagePlay.addEventListener('click',
             function () {
+                console.log(elementref.sendData)
                 elementref.playerParent.dispatchEvent(new CustomEvent('openPlay'))
                 elementref.text_info.dispatchEvent(elementref.sendData)
 

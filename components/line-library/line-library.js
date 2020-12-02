@@ -94,7 +94,6 @@ export class LineLibraryComponent extends Component {
 
             }
             scores.forEach(element => {
-                console.log(element)
                 element.removeEventListener('click', calific)
             });
         }
