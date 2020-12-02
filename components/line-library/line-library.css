@@ -161,7 +161,7 @@ button {
     }
     .indications {
         position: relative;
-        font-size: var( --h4-font);
+        font-size: var( --big-font);
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -171,7 +171,7 @@ button {
         margin: 0 10px;
     }
     .time {
-        font-size: var( --h4-font);
+        font-size: var( --big-font);
     }
     .second {
         grid-template-columns: 1fr 1fr  1fr;
@@ -202,7 +202,7 @@ button {
     }
     .indications {
         position: relative;
-        font-size: var( --h4-font);
+        font-size: var( --big-font);
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -212,7 +212,7 @@ button {
         margin: 0 10px;
     }
     .time {
-        font-size: var( --h4-font);
+        font-size: var( --big-font);
     }
 
     .imageSong {
